@@ -1,0 +1,80 @@
+#mapid {
+    margin-top: 50px;
+    height: 550px;
+    border: 2px solid navajowhite ;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.titre {
+    font-size: 70px;
+    text-align: center;
+}
+
+header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    color: orange;
+}
+
+main {
+    margin-top: 35px;
+}
+
+p {
+    text-decoration: none;
+    text-align:left;
+    font-size: 20px;
+    color : white; 
+}
+
+html {
+    background-color: orange;
+}
+
+header {
+    display: flex;
+}
+
+a:hover,
+a:focus {
+    color : orange;
+}
+
+li{display:inline-block;min-width:50px;}
+li a {
+    text-align: center;
+    text-decoration:none;
+    line-height: 70px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 1.3em;
+    color: black;
+    text-transform: uppercase;
+}
+
+li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+li a:hover:after {
+    width: 90%;
+    background: orange;
+}
+
+main {
+    text-align: center;
+}
+
+html {
+    background-color: navajowhite;
+    color: black;
+}
