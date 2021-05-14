@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #3c3c3c;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+  background: var(--dark-color);
+  padding: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.navbar-brand {
+  color: var(--white-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  padding-top: 0;
+}
+
+.nav-item .nav-link {
+  display: block;
+  color: var(--white-color);
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  padding: 2px 6px;
+}
+
+.box-login {
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+h2 {
+  text-align: center;
+}
+.form-groupe {
+  position: relative;
+}
+
+input {
+  display: block;
+  margin: 10px 20px 20px 20px;
+  outline: 0;
+  background: rgb(226, 226, 226);
+  width: 400px;
+  border: 0;
+  padding: 10px 12px;
+  border-radius: 3px;
+  font-size: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  outline: 0;
+  background: rgb(250, 165, 9);
+  width: 90%;
+  border: 0;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
+button:hover {
+  background: rgb(252, 181, 49);
+}
+button:active {
+  background: rgb(250, 165, 9);
+}
