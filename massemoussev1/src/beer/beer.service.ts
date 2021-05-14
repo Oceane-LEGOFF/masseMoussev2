@@ -151,4 +151,71 @@ export class BeerService {
         return result.id as string;
     }
 
+    async updateBeer ( id: string,
+        obdb_id: string,
+        title: string,
+        name: string,
+        brewery_type: string,
+        street: string,
+        adresse_2: string,
+        adresse_3: string,
+        city: string,
+        state: string,
+        country_province: string,
+        postal_code: string,
+        country: string,
+        longitude: string,
+        latitude: string,
+        phone: string,
+        website_url: string,
+        updated_at: string,
+        created_at: string)
+        {
+        const updateBeer = await this.findBeerById(id);
+        
+        if(id){
+            updateBeer.id = id;
+        }if(obdb_id){
+            updateBeer.obdb_id = obdb_id;
+        }if(title){
+            updateBeer.title = title;
+        }if(name){
+            updateBeer.name = name;
+        }if(brewery_type){
+            updateBeer.brewery_type = brewery_type;
+        }if(street){
+            updateBeer.street = street;
+        }if(adresse_2){
+            updateBeer.adresse_2 = adresse_2;
+        }if(adresse_3){
+            updateBeer.adresse_3 = adresse_3;
+        }if(city){
+            updateBeer.city = city;
+        }if(state){
+            updateBeer.state = state;
+        }if(country_province){
+            updateBeer.country_province = country_province;
+        }if(postal_code){
+            updateBeer.postal_code = postal_code;
+        }if(country){
+            updateBeer.country = country;
+        }if(longitude){
+            updateBeer.longitude = longitude;
+        }if(latitude){
+            updateBeer.latitude = latitude;
+        }if(phone){
+            updateBeer.phone = phone;
+        }if(phone){
+            updateBeer.phone = phone;   
+        }if(website_url){
+            updateBeer.website_url = website_url;  
+        }if(updated_at){
+            updateBeer.updated_at = updated_at;  
+        }if(created_at){
+            updateBeer.created_at = created_at;  
+        }
+        updateBeer.save();
+            
+    }
+
 }

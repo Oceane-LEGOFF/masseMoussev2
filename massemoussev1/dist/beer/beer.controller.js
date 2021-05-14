@@ -76,6 +76,7 @@ __decorate([
 __decorate([
     common_1.Post(),
     common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),
+    roles_decorator_1.Roles(role_enums_1.Role.Admin),
     __param(0, common_1.Body('id')),
     __param(1, common_1.Body('obdb_id')),
     __param(2, common_1.Body('title ')),
