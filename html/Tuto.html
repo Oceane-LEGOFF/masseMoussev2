@@ -1,160 +1,300 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>MasseMousse : Tuto pour faire sa propre bière</title>
-        <link href="Tuto.css" rel="stylesheet">
-    </head>
-    <aside class="left">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-    </aside>
-    <aside class="right">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-        <img src="image/pinte.png">
-    </aside>
-    <body>
-    <header>
-        <h5 id="hour">Clique ici pour afficher l'heure, comme ca tu peux savoir si l'Happy Hour près de chez toi commence bientot ou non</h5>
-        <ul class="menu">
-            <li><a href="mMousse.html">Acceuil </a></li>
-            <li><a href="ClassementBières.html">Classement</a></li>
-            <li><a href="HappyHour.html">Happy Hour</a></li>
-        </ul>
-        <h1>Qu'est ce que tu bois ?</h1>
-    </header>
-    <main>
-        <div>
-        <h2 class="titre">Tout d'abord, qu'est ce que la bière ?</h2>
-        <p>La fabrication de la bière consiste à produire une boisson alcoolisée par la fermentation d'un moût de céréales
-            dont les sucres complexes ont été rendus fermentescibles. Brassée jadis dans chaque maison de façon artisanale,
-            la bière est aujourd'hui fabriquée à diverses échelles dans des brasseries, par des maîtres brasseurs.</p>
-        </div>
-        <div>
-            <h2 class="titre">Quelle est sa composition ?</h2>
-            <p>La bière est composé de :</p>
-            <p>De l'eau : Il faut que l'eau soit de bonne qualité, il faut 6 à 8 litres d'eau pour faire 1 litre de bière
-                <br>Le malt : E n général de l’orge germé caramélisé, parfois du froment ou du seigle
-                <br>Du houblon : Pour l'amertume, les arômes, l'aseptisation et la digestibilité
-                <br>Des levures : Permettent la fermentation alcoolique mais donnent aussi le goût et le parfum 
-                <br>Grains crus (optionnel) : maïs, riz, seigle, avoine, épeautre
-            </p>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <title>Comment faire sa propre bière ?</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="../js/Tuto.js"></script>
+    <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">MasseMousse</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">Le tuto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#class" class="nav-link smoothScroll">Acces aux autres pages</a>
+                    </li>
+
+                </ul>
             </div>
-            <div>
-            <h2 class="titre">Maintenant que tu sais tout, voici les 5 grandes étapes !</h2>
-            <h3>1/ Le maltage : </h3>
-            <p>Le principe du maltage consiste à reproduire le développement naturel du grain d'orge afin qu'il produise
-                certaines enzymes nécessaires à la transformation de l'amidon en sucres (saccharification), et donc,
-                à la fabrication d'alcool lors de la fermentation. Il peut être précédé ou suivi d'une torréfaction.
-                Le maltage se déroule en quatre étapes :
-                <br>
-                <br>1 : Le trempage, qui consiste à mettre l'orge à tremper pendant une dizaine d'heures.
-                <br>
-                <br>2 : La germination, qui est la période durant laquelle l'orge va commencer à germer, et donc,
-                produire des enzymes telles que l'amylase. Cette étape dure environ une cinquantaine d'heures,
-                variable en fonction de l'orge, et donne naissance à ce que l'on appelle le « malt vert ».
-                <br>
-                <br>3 : Le touraillage, qui consiste à sécher le malt vert (son humidité passe de 45 % à 4 %) dans un four
-                à air à une température de 40 °C durant une trentaine d'heures. Lors de cette étape, le malteur effectue un
-                « coup de feu » où le malt vert est chauffé jusqu'à atteindre une température comprise entre 85 °C et 105 °C
-                durant 1 à 4 heures. Cette étape est cruciale car c'est la durée du « coup de feu » qui va déterminer la
-                couleur de la robe de la bière. De même, le taux d'humidité va jouer sur l'arôme de caramel.
-                <br>
-                <br>4 : Dégermage, qui consiste à débarrasser le malt de ses radicelles.
-                <br>
-                <br>À l'issue de cette étape, le « malt » peut être conservé près d'un an.</p>
-            <h3>2/ Le brassage : </h3>
-            <p>Le brassage, appelé aussi saccharification, consiste à transformer les sucres complexes (amidon) contenus dans
-                le grain en sucres simples fermentescibles, grâce à l'action des enzymes du malt, activées par chauffage.
-                On concasse grossièrement le malt avant de l'hydrater avec de l'eau ce qui forme la « maische ». Ce mélange
-                va ensuite être chauffé, il existe trois principales techniques :
-                <br>
-                <br>1 : La décoction : on retire une partie du brassin que l'on porte à ébullition avant de l'incorporer à la maische,
-                on appelle cela une « trempe ». Plusieurs trempes sont pratiquées afin d'augmenter graduellement la température.
-                Cette technique est utilisée pour la fermentation basse.
-                <br>
-                <br>2 : L'infusion par palier : on chauffe l'eau avec la maische, ou on incorpore à intervalle régulier de l'eau 
-                très chaude. C'est une méthode très flexible et précise.
-                <br>
-                <br>3 : L'infusion simple : on chauffe de l'eau que l'on incorpore au malt.
-                <br>
-                <br>On extrait ensuite le « moût primitif » de la maische en filtrant et en percolant avec de l'eau chaude
-                (comme pour du café) dans une cuve spéciale appelée « cuve filtre ». Le résidu solide s'appelle la « drêche »
-                et est recyclé pour nourrir le bétail.</p>
-            <h3>3/ L'aromatisation (ou houblonnage)</h3>
-            <p>C'est à cette étape que l'on incorpore le houblon et parfois des épices. Le mélange est porté à ébullition.
-                L'ébullition est propice à l'apparition des saveurs amères. L'amertume provient essentiellement d'une résine
-                jaunâtre produite par les cônes femelles du houblon : la lupuline.
-                Cette étape est réalisée durant la « cuisson » du moût. L'ébullition a pour principal intérêt de détruire les
-                enzymes dont le rôle est alors terminé.</p>
-            <h3>4/ La fermentation</h3>
-            <p>La fermentation est une étape cruciale dans la fabrication de la bière. Cette fermentation se décompose en deux
-                stades : la fermentation principale, qui dure de 3 à 10 jours à une température de 18 à 26 °C et la fermentation
-                secondaire (haute ou basse), dépendant des levures utilisées et de la température de fermentation.
-                La fermentation est l'étape à laquelle on ajoute des levures afin de produire l'alcool. Le « levain » est la
-                quantité de levure nécessaire pour ensemencer tout ou partie du moût destiné à la fermentation. Il existe trois
-                principales méthodes de fermentation :
-                <br>   
-                <br> 1 : La fermentation basse : elle se déroule à une température comprise entre 5 °C et 14 °C. L'une des
-                levures utilisée est la Saccharomyces pastorianus. Cette fermentation dure une dizaine de jours. À la fin de la
-                fermentation, les levures coulent au fond de la cuve, d'où le nom de fermentation basse. Il s'agit d'une
-                fermentation caractéristique des lagers.
-                <br>
-                <br>2 : La fermentation haute : elle se déroule à une température comprise entre 15 °C et 20 °C. L'une des
-                levures utilisée est la Saccharomyces cerevisiae. Cette fermentation dure de 4 à 8 jours. Au contraire de la
-                fermentation basse, les levures migrent à la surface du brassin, d'où son nom. Il s'agit d'une fermentation
-                caractéristique des Ales.
-                <br>
-                <br>3 : La fermentation spontanée : elle se déroule sans ajout de levures cultivées, seulement par contamination
-                « sauvage » de levures et bactéries en suspension dans l'air ambiant. Les levures retrouvées sont la
-                Brettanomyces bruxellensis et la Brettanomyces lambicus qui sont endémiques à la vallée de la Senne (région de
-                Bruxelles) et de la région de Pajottenland. Il s'agit d'une fermentation caractéristique des lambics.
-                <br>
-                <br>Enfin, beaucoup plus rare, il existe également une fermentation mixte. La fermentation est généralement
-                (sauf pour les blanches) suivie par une « clarification » qui permet de retirer les levures et les impuretés.
-                Outre la garde qui permet une décantation des particules de levures, protéines coagulées et résidus de houblon,
-                certaines brasseries utilisent des filtres micrométriques à diatomées ou encore une centrifugeuse. La bière peut
-                subir une pasteurisation afin de s'assurer d'un produit aseptisé et stable. Cela concerne notamment les bières
-                industrielles.</p>
-            <h3>5/ Le conditionnement</h3>
-            <p>Une fois le produit final atteint, il faut absolument éviter tout contact avec des agents pathogènes et avec
-                l'oxygène afin de minimiser la dégradation de la bière. Ainsi, la bière est stockée dans des réservoirs
-                réfrigérés avec une contre pression de CO2. Après une certaine période de « garde », la bière est soutirée et
-                conditionnée en fûts (pression), en bouteilles ou en canette en aluminium. Le remplissage des divers contenants
-                se fait sous vide d'air avant ou après la pasteurisation. Afin d'allonger le temps de conservation, de nombreux
-                brasseurs ont recours à la pasteurisation en bouteille.
-                <br>Dans le cas de bières artisanales ou de microbrasseries, la bière est dite « sur lie » ou refermentée. En effet, la
-                gazéification (« carbonatation ») de la bière se fait naturellement avec des levures actives dans la bouteille,
-                procédé qui ne permet pas la pasteurisation. Les levures inactives se déposent dans le fond de la bouteille
-                formant une lie.</p>
+
         </div>
-            <h2>Voila, tu connais maintenant toutes les étapes de la création de la bière, de la graine d'orge jusqu'à ta pinte,
-            pour fêter ça, allonrs boire</h2>
-            <script src="Tuto.js"></script>
-    </main>
-    <footer> 
-        <ul class="menu">
-            <li><a href="mMousse.html">Acceuil </a></li>
-            <li><a href="ClassementBières.html">Classement</a></li>
-            <li><a href="HappyHour.html">Happy Hour</a></li>
-        </ul>
-    </footer>
-    </body>
+    </nav>
+
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+
+        <div class="bg-overlay"></div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-md-10 mx-auto col-12">
+                    <div class="hero-text mt-5 text-center">
+
+                        <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Apprends les secrets de la
+                            conception de la bière !
+                        </h1>
+                        <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up"
+                            data-aos-delay="700">learn more</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
+                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Tout d'abord, qu'est ce que la bière ?</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">La fabrication de la bière consiste à produire une
+                        boisson alcoolisée par la fermentation d'un
+                        moût de céréales
+                        dont les sucres complexes ont été rendus fermentescibles. Brassée jadis dans chaque maison de
+                        façon artisanale,
+                        la bière est aujourd'hui fabriquée à diverses échelles dans des brasseries, par des maîtres
+                        brasseurs.</p>
+                </div>
+                <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
+                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Quelle est sa composition ?</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">La bière est composé de :</p>
+                    <p data-aos="fade-up" data-aos-delay="400">De l'eau : Il faut que l'eau soit de bonne qualité, il
+                        faut 6 à 8 litres d'eau pour faire 1 litre
+                        de bière
+                        <br>Le malt : E n général de l’orge germé caramélisé, parfois du froment ou du seigle
+                        <br>Du houblon : Pour l'amertume, les arômes, l'aseptisation et la digestibilité
+                        <br>Des levures : Permettent la fermentation alcoolique mais donnent aussi le goût et le parfum
+                        <br>Grains crus (optionnel) : maïs, riz, seigle, avoine, épeautre
+                    </p>
+                </div>
+                <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
+                    <h2>Maintenant que tu sais tout, voici les 5 grandes étapes !</h2>
+                    <h3>1/ Le maltage : </h3>
+                    <p>Le principe du maltage consiste à reproduire le développement naturel du grain d'orge afin qu'il
+                        produise
+                        certaines enzymes nécessaires à la transformation de l'amidon en sucres (saccharification), et
+                        donc,
+                        à la fabrication d'alcool lors de la fermentation. Il peut être précédé ou suivi d'une
+                        torréfaction.
+                        Le maltage se déroule en quatre étapes :
+                        <br>
+                        <br>1 : Le trempage, qui consiste à mettre l'orge à tremper pendant une dizaine d'heures.
+                        <br>
+                        <br>2 : La germination, qui est la période durant laquelle l'orge va commencer à germer, et
+                        donc,
+                        produire des enzymes telles que l'amylase. Cette étape dure environ une cinquantaine d'heures,
+                        variable en fonction de l'orge, et donne naissance à ce que l'on appelle le « malt vert ».
+                        <br>
+                        <br>3 : Le touraillage, qui consiste à sécher le malt vert (son humidité passe de 45 % à 4 %)
+                        dans un four
+                        à air à une température de 40 °C durant une trentaine d'heures. Lors de cette étape, le malteur
+                        effectue un
+                        « coup de feu » où le malt vert est chauffé jusqu'à atteindre une température comprise entre 85
+                        °C et 105 °C
+                        durant 1 à 4 heures. Cette étape est cruciale car c'est la durée du « coup de feu » qui va
+                        déterminer la
+                        couleur de la robe de la bière. De même, le taux d'humidité va jouer sur l'arôme de caramel.
+                        <br>
+                        <br>4 : Dégermage, qui consiste à débarrasser le malt de ses radicelles.
+                        <br>
+                        <br>À l'issue de cette étape, le « malt » peut être conservé près d'un an.</p>
+                    <h3>2/ Le brassage : </h3>
+                    <p>Le brassage, appelé aussi saccharification, consiste à transformer les sucres complexes (amidon)
+                        contenus dans
+                        le grain en sucres simples fermentescibles, grâce à l'action des enzymes du malt, activées par
+                        chauffage.
+                        On concasse grossièrement le malt avant de l'hydrater avec de l'eau ce qui forme la « maische ».
+                        Ce mélange
+                        va ensuite être chauffé, il existe trois principales techniques :
+                        <br>
+                        <br>1 : La décoction : on retire une partie du brassin que l'on porte à ébullition avant de
+                        l'incorporer à la maische,
+                        on appelle cela une « trempe ». Plusieurs trempes sont pratiquées afin d'augmenter graduellement
+                        la température.
+                        Cette technique est utilisée pour la fermentation basse.
+                        <br>
+                        <br>2 : L'infusion par palier : on chauffe l'eau avec la maische, ou on incorpore à intervalle
+                        régulier de l'eau
+                        très chaude. C'est une méthode très flexible et précise.
+                        <br>
+                        <br>3 : L'infusion simple : on chauffe de l'eau que l'on incorpore au malt.
+                        <br>
+                        <br>On extrait ensuite le « moût primitif » de la maische en filtrant et en percolant avec de
+                        l'eau chaude
+                        (comme pour du café) dans une cuve spéciale appelée « cuve filtre ». Le résidu solide s'appelle
+                        la « drêche »
+                        et est recyclé pour nourrir le bétail.</p>
+                    <h3>3/ L'aromatisation (ou houblonnage)</h3>
+                    <p>C'est à cette étape que l'on incorpore le houblon et parfois des épices. Le mélange est porté à
+                        ébullition.
+                        L'ébullition est propice à l'apparition des saveurs amères. L'amertume provient essentiellement
+                        d'une résine
+                        jaunâtre produite par les cônes femelles du houblon : la lupuline.
+                        Cette étape est réalisée durant la « cuisson » du moût. L'ébullition a pour principal intérêt de
+                        détruire les
+                        enzymes dont le rôle est alors terminé.</p>
+                    <h3>4/ La fermentation</h3>
+                    <p>La fermentation est une étape cruciale dans la fabrication de la bière. Cette fermentation se
+                        décompose en deux
+                        stades : la fermentation principale, qui dure de 3 à 10 jours à une température de 18 à 26 °C et
+                        la fermentation
+                        secondaire (haute ou basse), dépendant des levures utilisées et de la température de
+                        fermentation.
+                        La fermentation est l'étape à laquelle on ajoute des levures afin de produire l'alcool. Le «
+                        levain » est la
+                        quantité de levure nécessaire pour ensemencer tout ou partie du moût destiné à la fermentation.
+                        Il existe trois
+                        principales méthodes de fermentation :
+                        <br>
+                        <br> 1 : La fermentation basse : elle se déroule à une température comprise entre 5 °C et 14 °C.
+                        L'une des
+                        levures utilisée est la Saccharomyces pastorianus. Cette fermentation dure une dizaine de jours.
+                        À la fin de la
+                        fermentation, les levures coulent au fond de la cuve, d'où le nom de fermentation basse. Il
+                        s'agit d'une
+                        fermentation caractéristique des lagers.
+                        <br>
+                        <br>2 : La fermentation haute : elle se déroule à une température comprise entre 15 °C et 20 °C.
+                        L'une des
+                        levures utilisée est la Saccharomyces cerevisiae. Cette fermentation dure de 4 à 8 jours. Au
+                        contraire de la
+                        fermentation basse, les levures migrent à la surface du brassin, d'où son nom. Il s'agit d'une
+                        fermentation
+                        caractéristique des Ales.
+                        <br>
+                        <br>3 : La fermentation spontanée : elle se déroule sans ajout de levures cultivées, seulement
+                        par contamination
+                        « sauvage » de levures et bactéries en suspension dans l'air ambiant. Les levures retrouvées
+                        sont la
+                        Brettanomyces bruxellensis et la Brettanomyces lambicus qui sont endémiques à la vallée de la
+                        Senne (région de
+                        Bruxelles) et de la région de Pajottenland. Il s'agit d'une fermentation caractéristique des
+                        lambics.
+                        <br>
+                        <br>Enfin, beaucoup plus rare, il existe également une fermentation mixte. La fermentation est
+                        généralement
+                        (sauf pour les blanches) suivie par une « clarification » qui permet de retirer les levures et
+                        les impuretés.
+                        Outre la garde qui permet une décantation des particules de levures, protéines coagulées et
+                        résidus de houblon,
+                        certaines brasseries utilisent des filtres micrométriques à diatomées ou encore une
+                        centrifugeuse. La bière peut
+                        subir une pasteurisation afin de s'assurer d'un produit aseptisé et stable. Cela concerne
+                        notamment les bières
+                        industrielles.</p>
+                    <h3>5/ Le conditionnement</h3>
+                    <p>Une fois le produit final atteint, il faut absolument éviter tout contact avec des agents
+                        pathogènes et avec
+                        l'oxygène afin de minimiser la dégradation de la bière. Ainsi, la bière est stockée dans des
+                        réservoirs
+                        réfrigérés avec une contre pression de CO2. Après une certaine période de « garde », la bière
+                        est soutirée et
+                        conditionnée en fûts (pression), en bouteilles ou en canette en aluminium. Le remplissage des
+                        divers contenants
+                        se fait sous vide d'air avant ou après la pasteurisation. Afin d'allonger le temps de
+                        conservation, de nombreux
+                        brasseurs ont recours à la pasteurisation en bouteille.
+                        <br>Dans le cas de bières artisanales ou de microbrasseries, la bière est dite « sur lie » ou
+                        refermentée. En effet, la
+                        gazéification (« carbonatation ») de la bière se fait naturellement avec des levures actives
+                        dans la bouteille,
+                        procédé qui ne permet pas la pasteurisation. Les levures inactives se déposent dans le fond de
+                        la bouteille
+                        formant une lie.</p>
+                </div>
+                <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Voila, tu connais maintenant toutes les étapes
+                    de la création de la bière, de la graine d'orge
+                    jusqu'à ta pinte,
+                    pour fêter ça, allons boire un coup !</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="class section" id="class">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 text-center mb-5">
+                    <h6 data-aos="fade-up">Pour acceder aux différentes pages tu certifies avoir 18 ans minimum.</h6>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="class-thumb">
+                        <a href="ClassementBières.html">
+                            <img src="../images/class/classement.jpg" class="img-fluid" alt="Class">
+                        </a>
+                        <div class="class-info">
+                            <h3 class="mb-1">Classement </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="class-thumb">
+                        <a href="../index.html">
+
+                            <img src="../images/class/home.jpg" class="img-fluid" alt="Class">
+                        </a>
+                        <div class="class-info">
+                            <h3 class="mb-1">Acceuil</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="class-thumb">
+                        <a href="HappyHour.html">
+
+                            <img src="../images/class/happyHour.jpg" class="img-fluid" alt="Class">
+                        </a>
+                        <div class="class-info">
+                            <h3 class="mb-1">HappyHour</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/Tuto.js"></script>
+
+</body>
+
 </html>
