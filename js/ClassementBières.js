@@ -18,12 +18,17 @@ $(function(){
 	});
 });
 
+//function getValue() {
+    // Sélectionner l'élément input et récupérer sa valeur
+//    var input = document.getElementById("site-search").value;
+//}
 
 function loadDoc() {
 	
+var input = document.getElementById("site-search").value;
 var xhr = new XMLHttpRequest(),
     method = "GET",
-    url = "http://localhost:3000/beer/search?search=['letters']";
+    url = 'http://localhost:3000/beer/search?search=' + input;
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
