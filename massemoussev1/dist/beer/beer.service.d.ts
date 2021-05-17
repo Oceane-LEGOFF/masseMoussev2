@@ -92,4 +92,5 @@ export declare class BeerService {
     filterByTitle(name: string): Promise<Beer[]>;
     filterByLetters(letters: string): Promise<Beer[]>;
     inserBeer(id: string, obdb_id: string, title: string, name: string, brewery_type: string, street: string, adresse_2: string, adresse_3: string, city: string, state: string, country_province: string, postal_code: string, country: string, longitude: string, latitude: string, phone: string, website_url: string, updated_at: string, created_at: string): Promise<string>;
+    updateBeer(id: string, obdb_id: string, title: string, name: string, brewery_type: string, street: string, adresse_2: string, adresse_3: string, city: string, state: string, country_province: string, postal_code: string, country: string, longitude: string, latitude: string, phone: string, website_url: string, updated_at: string, created_at: string): Promise<void>;
 }

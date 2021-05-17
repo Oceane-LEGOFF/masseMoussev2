@@ -26,19 +26,19 @@ export class BeerController {
     getBeers1(@Query('name') name: string){
         const beersT = this.beerService.filterByTitle(name);
         console.log('article filtré par nom', beersT);
-        return beersT[name]; 
+        return this.beerService.getBeers1(beersT[name]); 
     }
 
     @Get('/search')   
     getBeers2(@Query('search') letters:string){
         const beers = this.beerService.filterByLetters(letters);
         console.log('lettre', [beers]);
-        return beers;
+        return beers[letters];
     }  
 
     @Post()
     @UseGuards(JwtAuthGuard)
-    @Roles(Role.Admin)
+    // @Roles(Role.Admin)
     async addBeer(
         @Body('id') beeid: string,
         @Body('obdb_id') beeobdb_id: string,
@@ -59,8 +59,6 @@ export class BeerController {
         @Body('website_url') beewebsite_url: string,
         @Body('update_at') beeupdate_at: string,
         @Body('created_at') beecreated_at: string,
-
-
         
     ){
         const generatedId = await  this.beerService.inserBeer(
@@ -88,9 +86,10 @@ export class BeerController {
         return { id: generatedId };
       }
 
-      @UseGuards(JwtAuthGuard)
-      @Roles(Role.Admin)
+    //   @Roles(Role.Admin)
       @Patch(':id')
+      @UseGuards(JwtAuthGuard)
+
       async updateBeer(
         @Param('id') beeid: string,
         @Body('obdb_id') beeobdb_id: string,

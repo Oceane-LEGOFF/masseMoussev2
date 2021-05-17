@@ -133,6 +133,70 @@ let BeerService = class BeerService {
         console.log(result);
         return result.id;
     }
+    async updateBeer(id, obdb_id, title, name, brewery_type, street, adresse_2, adresse_3, city, state, country_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at) {
+        const updateBeer = await this.findBeerById(id);
+        if (id) {
+            updateBeer.id = id;
+        }
+        if (obdb_id) {
+            updateBeer.obdb_id = obdb_id;
+        }
+        if (title) {
+            updateBeer.title = title;
+        }
+        if (name) {
+            updateBeer.name = name;
+        }
+        if (brewery_type) {
+            updateBeer.brewery_type = brewery_type;
+        }
+        if (street) {
+            updateBeer.street = street;
+        }
+        if (adresse_2) {
+            updateBeer.adresse_2 = adresse_2;
+        }
+        if (adresse_3) {
+            updateBeer.adresse_3 = adresse_3;
+        }
+        if (city) {
+            updateBeer.city = city;
+        }
+        if (state) {
+            updateBeer.state = state;
+        }
+        if (country_province) {
+            updateBeer.country_province = country_province;
+        }
+        if (postal_code) {
+            updateBeer.postal_code = postal_code;
+        }
+        if (country) {
+            updateBeer.country = country;
+        }
+        if (longitude) {
+            updateBeer.longitude = longitude;
+        }
+        if (latitude) {
+            updateBeer.latitude = latitude;
+        }
+        if (phone) {
+            updateBeer.phone = phone;
+        }
+        if (phone) {
+            updateBeer.phone = phone;
+        }
+        if (website_url) {
+            updateBeer.website_url = website_url;
+        }
+        if (updated_at) {
+            updateBeer.updated_at = updated_at;
+        }
+        if (created_at) {
+            updateBeer.created_at = created_at;
+        }
+        updateBeer.save();
+    }
 };
 BeerService = __decorate([
     common_1.Injectable(),
