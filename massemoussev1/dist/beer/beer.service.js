@@ -119,13 +119,13 @@ let BeerService = class BeerService {
     }
     async filterByTitle(name) {
         const beers = await this.beerModel.find({}).where('name').equals(name).lean();
-        console.log('beer filtré par nom, beers', beers);
+        console.log('beer filtré par nom, beers', beers[name]);
         return beers[name];
     }
     async filterByLetters(letters) {
-        const beersT = await this.beerModel.find({}).where('title').regex(letters);
-        console.log('Voici les beers contenant la lettre', letters, beersT);
-        return beersT[letters];
+        const beersL = await this.beerModel.find({}).where('name').regex(letters);
+        console.log('Voici les beers contenant la lettre', letters, beersL);
+        return beersL;
     }
     async inserBeer(id, obdb_id, title, name, brewery_type, street, adresse_2, adresse_3, city, state, country_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at) {
         const newBeer = new this.beerModel({ id, obdb_id, title, name, brewery_type, street, adresse_2, adresse_3, city, state, country_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at });

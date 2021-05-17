@@ -1697,13 +1697,13 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.service.ts": {
-        "version": "213cdc722667708bd883b2c15f4dd5660a67f5ee00571bf9f0456e8d677968f3",
+        "version": "7ecd08a370935c8d8d88a2cd7539ae4ab4378c4b19ada3b3a506bd7a6379dee7",
         "signature": "bfc69ce4550b5f9441bc17300d90c30bd9e80059156b6e02ced70140cf731ec8",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "fb242b26dd99c0166d4b295031210ccc472f349d20e0296088fc23d2570961b9",
-        "signature": "897b0e7765638e5bcdb55de3aae7561a58d679460a09bca6f041f2ce2b27cc11",
+        "version": "794c766c92cd48d07d0f9bab77cefadf48427b9904101d439dfed6d12c268b9c",
+        "signature": "5db38fc3db9ba7eaf77aaa0bb5d598dbe3ba31329299c43e11e84972c1fa117c",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.module.ts": {

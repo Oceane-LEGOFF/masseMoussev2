@@ -115,15 +115,15 @@ export class BeerService {
 
     async filterByTitle(name: string): Promise <Beer[]> {
         const beers = await this.beerModel.find({}).where('name').equals(name). lean();
-        console.log('beer filtré par nom, beers', beers);
+        console.log('beer filtré par nom, beers', beers[name]);
         return beers[name];
     }
 
 
     async filterByLetters(letters: string): Promise <Beer[]> {
-        const beersT = await this.beerModel.find({}).where('title').regex(letters);
-        console.log('Voici les beers contenant la lettre', letters, beersT);
-        return beersT[letters]; 
+        const beersL = await this.beerModel.find({}).where('name').regex(letters);
+        console.log('Voici les beers contenant la lettre', letters, beersL);
+        return beersL; 
     }
 
     async inserBeer (id: string,

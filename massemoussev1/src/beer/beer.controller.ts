@@ -33,7 +33,7 @@ export class BeerController {
     getBeers2(@Query('search') letters:string){
         const beers = this.beerService.filterByLetters(letters);
         console.log('lettre', [beers]);
-        return beers[letters];
+        return beers;
     }  
 
     @Post()

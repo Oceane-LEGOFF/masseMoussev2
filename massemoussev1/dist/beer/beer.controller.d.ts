@@ -44,7 +44,10 @@ export declare class BeerController {
         updated_at: any;
         created_at: any;
     }>;
-    getBeers1(name: string): {
-        beersT: Promise<import("./beer.model").Beer[]>;
-    };
+    getBeers1(name: string): Promise<import("./beer.model").Beer[]>;
+    getBeers2(letters: string): Promise<import("./beer.model").Beer[]>;
+    addBeer(beeid: string, beeobdb_id: string, betitle: string, beename: string, beebrewery_type: string, beestreet: string, beeadresse_2: string, beeadresse_3: string, beecity: string, beestate: string, beecountry_province: string, beepostal_code: string, beecountry: string, beelongitude: string, beelatitude: string, beephone: string, beewebsite_url: string, beeupdate_at: string, beecreated_at: string): Promise<{
+        id: string;
+    }>;
+    updateBeer(beeid: string, beeobdb_id: string, betitle: string, beename: string, beebrewery_type: string, beestreet: string, beeadresse_2: string, beeadresse_3: string, beecity: string, beestate: string, beecountry_province: string, beepostal_code: string, beecountry: string, beelongitude: string, beelatitude: string, beephone: string, beewebsite_url: string, beeupdate_at: string, beecreated_at: string): Promise<any>;
 }
