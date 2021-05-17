@@ -23,7 +23,7 @@ function loadDoc() {
 	
 var xhr = new XMLHttpRequest(),
     method = "GET",
-    url = "http://localhost:3000/beer/search?search=['letters']";
+    url = "http://localhost:3000/beer/search]";
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
