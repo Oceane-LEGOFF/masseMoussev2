@@ -26,7 +26,7 @@ export class BeerController {
     getBeers1(@Query('name') name: string){
         const beersT = this.beerService.filterByTitle(name);
         console.log('article filtré par nom', beersT);
-        return this.beerService.getBeers1(beersT[name]); 
+        return beersT; 
     }
 
     @Get('/search')   

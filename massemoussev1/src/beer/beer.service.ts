@@ -119,6 +119,7 @@ export class BeerService {
         return beers[name];
     }
 
+
     async filterByLetters(letters: string): Promise <Beer[]> {
         const beersT = await this.beerModel.find({}).where('title').regex(letters);
         console.log('Voici les beers contenant la lettre', letters, beersT);

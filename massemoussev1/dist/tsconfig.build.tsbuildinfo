@@ -1702,8 +1702,8 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "ed4ad45411528290d1bc7b6799bf4eabced71247fd36f81afce99724f64c01a4",
-        "signature": "0388987ad810027f99eb7d796e4c3ba106ef2cbd0ec3d868f6df1512fbcadf83",
+        "version": "fb242b26dd99c0166d4b295031210ccc472f349d20e0296088fc23d2570961b9",
+        "signature": "897b0e7765638e5bcdb55de3aae7561a58d679460a09bca6f041f2ce2b27cc11",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.module.ts": {
@@ -1942,7 +1942,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "f33713aeaf907355289c0c1b4d5cf6bded3da4f7652bcb0b604dee5790d0368d",
+        "version": "8064a32e751d4d8dbd872b2b08b710b96270d1cce883941bee6adabb29c4aa83",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -4977,6 +4977,7 @@
         "../src/auth/auth.service.ts"
       ],
       "../src/beer/beer.controller.ts": [
+        "../src/beer/beer.model.ts",
         "../src/beer/beer.service.ts"
       ],
       "../src/beer/beer.model.ts": [
