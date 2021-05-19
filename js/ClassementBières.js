@@ -31,18 +31,17 @@ var xhr = new XMLHttpRequest(),
     url = 'http://localhost:3000/beer/search?search=' + input;
 
 xhr.open(method, url, true);
+var div = document.getElementById('8mort6blesse');
+div.innerText = "";
 xhr.onreadystatechange = function () {
   if(xhr.readyState === 4 && xhr.status === 200) {
-	console.log('test');
-	console.log(xhr.responseText);
-	var tab = [];
-	xhr.responseText.forEach(element => {
-		console.log(element);
+	var sheesh = JSON.parse(xhr.responseText);
+	sheesh.forEach(element => {
+		div.innerText += (element.name);
 	});
   }
 };
 xhr.send();
-
 }
 
 loadDoc();
