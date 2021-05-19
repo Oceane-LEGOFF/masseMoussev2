@@ -3,7 +3,7 @@ export declare class ClientsController {
     private readonly clientsService;
     constructor(clientsService: ClientsService);
     getAllClients(): Promise<{
-        id: string;
+        id: any;
         name: string;
         prenom: string;
         naissance: string;
@@ -20,7 +20,7 @@ export declare class ClientsController {
         mdp: any;
         role: any;
     }>;
-    getClients1(name: string): Promise<import("./clients.modele").Clients[]>;
+    getClients3(letters: string): Promise<import("./clients.modele").Clients[]>;
     getClients2(letters: string): Promise<import("./clients.modele").Clients[]>;
     addBeer(cliid: string, cliname: string, cliprenom: string, clinaissance: string, climail: string, climdp: string, clirole: string): Promise<{
         id: string;

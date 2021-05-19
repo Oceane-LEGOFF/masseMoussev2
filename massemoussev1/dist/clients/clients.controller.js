@@ -31,13 +31,13 @@ let ClientsController = class ClientsController {
         console.log('Client selon id recherché');
         return this.clientsService.getSingleClientById(clientId);
     }
-    getClients1(name) {
-        const clientsN = this.clientsService.filterByName(name);
-        console.log('article filtré par nom', clientsN);
-        return clientsN;
+    getClients3(letters) {
+        const client = this.clientsService.filterByLetters(letters);
+        console.log('lettre', [client]);
+        return client;
     }
     getClients2(letters) {
-        const client = this.clientsService.filterByLetters(letters);
+        const client = this.clientsService.filterByLetters0(letters);
         console.log('lettre', [client]);
         return client;
     }
@@ -65,13 +65,13 @@ __decorate([
 ], ClientsController.prototype, "getClients", null);
 __decorate([
     common_1.Get('/searchN'),
-    __param(0, common_1.Query('name')),
+    __param(0, common_1.Query('search')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
-], ClientsController.prototype, "getClients1", null);
+], ClientsController.prototype, "getClients3", null);
 __decorate([
-    common_1.Get('/search'),
+    common_1.Get('/searchM'),
     __param(0, common_1.Query('search')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),

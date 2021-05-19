@@ -2,7 +2,7 @@
 import * as mongoose from 'mongoose';
 
 export const ClientsSchema = new mongoose.Schema({ // Schema mapé à une collection MongoDB et définit la forme des documents au sein de la collection
-  id: {type: String, require: true},
+
   name: {type: String, require: true},
   prenom: {type: String, require: true},
   naissance: {type: String, require: true},
@@ -14,7 +14,7 @@ export const ClientsSchema = new mongoose.Schema({ // Schema mapé à une collec
 },);
 
 export interface Clients extends mongoose.Document {
-    id: string,
+
     name: string,
     prenom: string,
     naissance: string,
