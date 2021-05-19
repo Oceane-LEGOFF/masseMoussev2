@@ -1936,8 +1936,28 @@
         "signature": "caed67a82a8fadd14b201f02d12b59da59586dd55c667e771f69a5de29f5bdfe",
         "affectsGlobalScope": false
       },
+      "../src/clients/clients.modele.ts": {
+        "version": "8856f4045dc7d167fda1447e527b221db44080d923322759be22da8532cf3fe2",
+        "signature": "b0c1b52c19f35caf2e00dd227c001e3e4c647b3e36e4bb4017a126c853718aca",
+        "affectsGlobalScope": false
+      },
+      "../src/clients/clients.service.ts": {
+        "version": "d25bd3300ffbf992922b700aaf4e9f4ef10923b85d24bae7dd025a6842f46099",
+        "signature": "02ccacfaa6943840636395545ddf41f435df5625cfbd5c96229a255e66b4387e",
+        "affectsGlobalScope": false
+      },
+      "../src/clients/clients.controller.ts": {
+        "version": "26c89c917252cb756f55b5de92268dac46058543b0548ebdd4e4009a57ca0c0a",
+        "signature": "e458b48a732c61aa202cc796c152838e4c87716ae06bfefa4649d49b36d95e95",
+        "affectsGlobalScope": false
+      },
+      "../src/clients/clients.module.ts": {
+        "version": "beab1b2004b0a9e8f4db39561f1176da2c51ca9f1c60368468c282b060da2333",
+        "signature": "e4438badd77fc259d1186b8abeba4e315f4906f9216a04040a576273bbb1a923",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "c6b7f5ff6dda17c167f03d5ea5256c45f44116ded22cb287d839148b9e7e872d",
+        "version": "84db1c2e3d432a0f719ae6d738f4936da75ca1e2469b9094408593ea00580938",
         "signature": "c7c5cf296b504ce02dfbaba6c3542b5f42d8396f5758698215a3aa489bfbffda",
         "affectsGlobalScope": false
       },
@@ -2126,7 +2146,7 @@
         "signature": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "affectsGlobalScope": false
       },
-      "../../../../../../../node_modules/@types/zen-observable/index.d.ts": {
+      "../../../../../../../../node_modules/@types/zen-observable/index.d.ts": {
         "version": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
         "signature": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
         "affectsGlobalScope": true
@@ -3512,6 +3532,7 @@
         "../src/beer/beer.controller.ts",
         "../src/beer/beer.module.ts",
         "../src/beer/beer.service.ts",
+        "../src/clients/clients.module.ts",
         "../src/role/roles.guards.ts",
         "../src/users/users.module.ts"
       ],
@@ -3577,6 +3598,29 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/beer/beer.model.ts"
+      ],
+      "../src/clients/clients.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/auth/jwt-auth.guards.ts",
+        "../src/clients/clients.service.ts",
+        "../src/role/role.enums.ts",
+        "../src/role/roles.decorator.ts"
+      ],
+      "../src/clients/clients.modele.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/clients/clients.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/clients/clients.controller.ts",
+        "../src/clients/clients.modele.ts",
+        "../src/clients/clients.service.ts"
+      ],
+      "../src/clients/clients.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/clients/clients.modele.ts"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
@@ -4986,6 +5030,17 @@
       "../src/beer/beer.service.ts": [
         "../node_modules/mongoose/index.d.ts",
         "../src/beer/beer.model.ts"
+      ],
+      "../src/clients/clients.controller.ts": [
+        "../src/clients/clients.modele.ts",
+        "../src/clients/clients.service.ts"
+      ],
+      "../src/clients/clients.modele.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/clients/clients.service.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/clients/clients.modele.ts"
       ],
       "../src/role/roles.decorator.ts": [
         "../node_modules/@nestjs/common/index.d.ts",

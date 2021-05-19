@@ -10,11 +10,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 import "reflect-metadata";
 import { RolesGuard } from './role/roles.guards';
 import { APP_GUARD } from '@nestjs/core';
+import { ClientsModule } from './clients/clients.module';
 
 
 @Module({
   imports: [
     BeerModule, 
+    ClientsModule,
     MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse?retryWrites=true&w=majority"),
     AuthModule,
     UsersModule,

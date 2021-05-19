@@ -17,12 +17,14 @@ const mongoose_1 = require("@nestjs/mongoose");
 require("reflect-metadata");
 const roles_guards_1 = require("./role/roles.guards");
 const core_1 = require("@nestjs/core");
+const clients_module_1 = require("./clients/clients.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [
             beer_module_1.BeerModule,
+            clients_module_1.ClientsModule,
             mongoose_1.MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse?retryWrites=true&w=majority"),
             auth_module_1.AuthModule,
             users_module_1.UsersModule,
