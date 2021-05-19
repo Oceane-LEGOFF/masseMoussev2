@@ -44,14 +44,14 @@ export class ClientsController {
     //     return clientsN; 
     // }
 
-    @Get('/searchN')   
+    @Get('/searchM')   
     getClients3(@Query('search') letters:string){
         const client = this.clientsService.filterByLetters(letters);
         console.log('lettre', [client]);
         return client;
     }  
 
-     @Get('/searchM')   
+     @Get('/searchN')   
     getClients2(@Query('search') letters:string){
         const client = this.clientsService.filterByLetters0(letters);
         console.log('lettre', [client]);
