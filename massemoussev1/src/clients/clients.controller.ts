@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Param, Patch, Post, Query, UseGuards} from '@nestjs/common';
+import { mainModule } from 'process';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guards';
 import { Role } from 'src/role/role.enums';
 import { Roles } from 'src/role/roles.decorator';
@@ -22,19 +23,41 @@ export class ClientsController {
         return this.clientsService.getSingleClientById(clientId);
     }
 
-    @Get('/searchN')
-    getClients1(@Query('name') name: string){
-        const clientsN = this.clientsService.filterByName(name);
-        console.log('article filtré par nom', clientsN);
-        return clientsN; 
-    }
+    // @Get('/mail:mail')
+    // getClients0(@Param('mail') clientMail: string){
+    //     const mail = this.clientsService.getSingleClientByMail(clientMail)
+    //     console.log('Client recherché selon mail', mail);
+    //     return this.clientsService.getSingleClientByMail(clientMail);
+    // }
 
-    @Get('/search')   
-    getClients2(@Query('search') letters:string){
+    // @Get('/searchM')
+    // getClients1(@Query('mail') mail: string){
+    //     const clientsM = this.clientsService.filterByMail(mail);
+    //     console.log('client filtré par mail', clientsM);
+    //     return clientsM; 
+    // }
+
+    // @Get('/searchN')
+    // getClients2(@Query('name') name: string){
+    //     const clientsN = this.clientsService.filterByName(name);
+    //     console.log('article filtré par nom', clientsN);
+    //     return clientsN; 
+    // }
+
+    @Get('/searchN')   
+    getClients3(@Query('search') letters:string){
         const client = this.clientsService.filterByLetters(letters);
         console.log('lettre', [client]);
         return client;
     }  
+
+     @Get('/searchM')   
+    getClients2(@Query('search') letters:string){
+        const client = this.clientsService.filterByLetters0(letters);
+        console.log('lettre', [client]);
+        return client;
+    }
+
 
     @Post()
     @UseGuards(JwtAuthGuard)

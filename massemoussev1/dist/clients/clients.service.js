@@ -32,6 +32,16 @@ let ClientsService = class ClientsService {
             role: cli.role,
         }));
     }
+    async getClients0() {
+        const clients = await this.clientsModel.find().exec();
+        return clients.map((cli) => ({ id: cli.id,
+            name: cli.name,
+            prenom: cli.prenom,
+            naissance: cli.naissance,
+            mail: cli.mail,
+            mdp: cli.mdp,
+            role: cli.role, }));
+    }
     async getClients1() {
         const clients = await this.clientsModel.find().exec();
         return clients.map((cli) => ({ id: cli.id,
@@ -43,6 +53,16 @@ let ClientsService = class ClientsService {
             role: cli.role, }));
     }
     async getClients2() {
+        const clients = await this.clientsModel.find().exec();
+        return clients.map((cli) => ({ id: cli.id,
+            name: cli.name,
+            prenom: cli.prenom,
+            naissance: cli.naissance,
+            mail: cli.mail,
+            mdp: cli.mdp,
+            role: cli.role, }));
+    }
+    async getClients3() {
         const clients = await this.clientsModel.find().exec();
         return clients.map((cli) => ({ id: cli.id,
             name: cli.name,
@@ -74,15 +94,40 @@ let ClientsService = class ClientsService {
             throw new common_1.NotFoundException('Le client n' + 'a pas été trouvé selon l' + 'id');
         }
     }
+    async getSingleClientByMail(clientMail) {
+        const client = await this.findClientByMail(clientMail);
+        console.log('client', client);
+        return client;
+    }
+    async findClientByMail(clientMail) {
+        let client;
+        try {
+            client = await this.clientsModel.findOne([clientMail]);
+            return client;
+        }
+        catch (error) {
+            throw new common_1.NotFoundException('Le client n' + 'a pas été trouvé selon le mail');
+        }
+    }
+    async filterByMail(mail) {
+        const clients = await this.clientsModel.find({}).where('mail').equals(mail).lean();
+        console.log('client filtré par mail', clients[mail]);
+        return clients[mail];
+    }
     async filterByName(name) {
         const clients = await this.clientsModel.find({}).where('name').equals(name).lean();
-        console.log('client filtré par nom, beers', clients[name]);
+        console.log('client filtré par nom', clients[name]);
         return clients[name];
     }
     async filterByLetters(letters) {
-        const clientsL = await this.clientsModel.find({}).where('name').regex(letters);
+        const clientsL = await this.clientsModel.find({}).where('mail').regex(letters);
         console.log('Voici les clients contenant la lettre', letters, clientsL);
         return clientsL;
+    }
+    async filterByLetters0(letters) {
+        const clientsN = await this.clientsModel.find({}).where('name').regex(letters);
+        console.log('Voici les clients contenant la lettre', letters, clientsN);
+        return clientsN;
     }
     async insertClient(id, name, prenom, naissance, mail, mdp, role) {
         const newClient = new this.clientsModel({ id, name, prenom, naissance, mail, mdp, role });
