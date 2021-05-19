@@ -34,7 +34,11 @@ xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
   if(xhr.readyState === 4 && xhr.status === 200) {
 	console.log('test');
-    console.log(xhr.responseText);
+	console.log(xhr.responseText);
+	var tab = [];
+	xhr.responseText.forEach(element => {
+		console.log(element);
+	});
   }
 };
 xhr.send();

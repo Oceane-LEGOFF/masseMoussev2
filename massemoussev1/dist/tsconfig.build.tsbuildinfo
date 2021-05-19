@@ -1947,7 +1947,7 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.controller.ts": {
-        "version": "e1cb75905e2706c180c8521e980965dbe908d92e4917ba20d24645ebdd9b3583",
+        "version": "cbd90acc2293795f865e1ec7844d9384ba6c59b210a4163445c387b54acd4777",
         "signature": "a8eea2eac8f5d45388411ac3508fcfca882af28828586e999e95a6b53afa8d40",
         "affectsGlobalScope": false
       },
@@ -2145,11 +2145,6 @@
         "version": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "signature": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "affectsGlobalScope": false
-      },
-      "../../../../../../../../node_modules/@types/zen-observable/index.d.ts": {
-        "version": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
-        "signature": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
-        "affectsGlobalScope": true
       }
     },
     "options": {
