@@ -36,7 +36,7 @@ let ClientsController = class ClientsController {
         console.log('article filtré par nom', clientsN);
         return clientsN;
     }
-    getBeers2(letters) {
+    getClients2(letters) {
         const client = this.clientsService.filterByLetters(letters);
         console.log('lettre', [client]);
         return client;
@@ -76,7 +76,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
-], ClientsController.prototype, "getBeers2", null);
+], ClientsController.prototype, "getClients2", null);
 __decorate([
     common_1.Post(),
     common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),

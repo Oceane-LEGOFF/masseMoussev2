@@ -1571,11 +1571,6 @@
         "signature": "0a411e48f5929daaf51276b384d29ba44a94dd8635358a4ba083ad89b02384da",
         "affectsGlobalScope": false
       },
-      "../src/role/roles.decorator.ts": {
-        "version": "974d4237d1b9204eb32ca36961a9175b9cccf523910b4e3289b0e53021931285",
-        "signature": "b334755d65f112effe69a26845fe3102f931d8cd701076d9efdf76f9aa985328",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
         "version": "8777e8b9e2aaad9e400a18387113faf9593806889cf4ef4267ce5271fce8b8be",
         "signature": "8777e8b9e2aaad9e400a18387113faf9593806889cf4ef4267ce5271fce8b8be",
@@ -1691,18 +1686,23 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/role/roles.decorator.ts": {
+        "version": "974d4237d1b9204eb32ca36961a9175b9cccf523910b4e3289b0e53021931285",
+        "signature": "b334755d65f112effe69a26845fe3102f931d8cd701076d9efdf76f9aa985328",
+        "affectsGlobalScope": false
+      },
       "../src/beer/beer.model.ts": {
-        "version": "3d2eb57386d8592d7cd586ed0c6a2ff96d3f0a38c2b92db6b90a556e815a67e2",
+        "version": "f7a3802df124b16828006b036e78ee91a5c169b9f1ad6875169aa6a3a4c743de",
         "signature": "411f25360ed6af3cf3490d2f59dfc3001a96b945ce55de8e2b1766a21e109c67",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.service.ts": {
-        "version": "7ecd08a370935c8d8d88a2cd7539ae4ab4378c4b19ada3b3a506bd7a6379dee7",
+        "version": "bc0c8959f0d439aecc354c7f1ce2e1f5425ea532c20cfde91fa72247417c2054",
         "signature": "bfc69ce4550b5f9441bc17300d90c30bd9e80059156b6e02ced70140cf731ec8",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "794c766c92cd48d07d0f9bab77cefadf48427b9904101d439dfed6d12c268b9c",
+        "version": "ca34fc95460a513ff1db7d490e19ebaa726ad9ba51c651d92105ac4da86e8783",
         "signature": "5db38fc3db9ba7eaf77aaa0bb5d598dbe3ba31329299c43e11e84972c1fa117c",
         "affectsGlobalScope": false
       },
@@ -1937,18 +1937,18 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.modele.ts": {
-        "version": "8856f4045dc7d167fda1447e527b221db44080d923322759be22da8532cf3fe2",
+        "version": "bc7f5106022af9cc185b056496a6fa4d3cb59700b1b7e175fd907b53b7f444ef",
         "signature": "b0c1b52c19f35caf2e00dd227c001e3e4c647b3e36e4bb4017a126c853718aca",
         "affectsGlobalScope": false
       },
       "../src/clients/clients.service.ts": {
-        "version": "d25bd3300ffbf992922b700aaf4e9f4ef10923b85d24bae7dd025a6842f46099",
-        "signature": "02ccacfaa6943840636395545ddf41f435df5625cfbd5c96229a255e66b4387e",
+        "version": "525c943996f99c70479623a3c0cff7fcecda955a13d4d42a7b34783bd288c980",
+        "signature": "165a5376157e6261b9c47932968217ad2b2d580bcdce8cf66256f584263af7db",
         "affectsGlobalScope": false
       },
       "../src/clients/clients.controller.ts": {
-        "version": "26c89c917252cb756f55b5de92268dac46058543b0548ebdd4e4009a57ca0c0a",
-        "signature": "e458b48a732c61aa202cc796c152838e4c87716ae06bfefa4649d49b36d95e95",
+        "version": "e7d4e1eaa6690f1d26ffb4e8805a3a6a7786ff3bc6ce77131e911d78f2649903",
+        "signature": "2aff4e0f3d02fb9d3955cfe4e017f6833ae4727e176d9bd87d1b0d632515dee2",
         "affectsGlobalScope": false
       },
       "../src/clients/clients.module.ts": {
@@ -1957,7 +1957,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "84db1c2e3d432a0f719ae6d738f4936da75ca1e2469b9094408593ea00580938",
+        "version": "b361f1755f2afb72041e9cc99d25a7f9d4cee52f9179e9a12e6d489c449072cb",
         "signature": "c7c5cf296b504ce02dfbaba6c3542b5f42d8396f5758698215a3aa489bfbffda",
         "affectsGlobalScope": false
       },
@@ -3529,9 +3529,7 @@
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../src/auth/auth.module.ts",
-        "../src/beer/beer.controller.ts",
         "../src/beer/beer.module.ts",
-        "../src/beer/beer.service.ts",
         "../src/clients/clients.module.ts",
         "../src/role/roles.guards.ts",
         "../src/users/users.module.ts"
@@ -3582,7 +3580,6 @@
         "../src/role/roles.decorator.ts"
       ],
       "../src/beer/beer.model.ts": [
-        "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/mongoose/index.d.ts"
       ],
       "../src/beer/beer.module.ts": [
@@ -3595,7 +3592,6 @@
       "../src/beer/beer.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
         "../node_modules/mongoose/index.d.ts",
         "../src/beer/beer.model.ts"
       ],

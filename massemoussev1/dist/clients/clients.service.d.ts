@@ -5,6 +5,7 @@ export declare class ClientsService {
     private clients;
     constructor(clientsModel: Model<Clients>);
     getClients(): Promise<{
+        id: string;
         name: string;
         prenom: string;
         naissance: string;

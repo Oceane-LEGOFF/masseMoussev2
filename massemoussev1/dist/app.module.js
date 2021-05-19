@@ -25,7 +25,7 @@ AppModule = __decorate([
         imports: [
             beer_module_1.BeerModule,
             clients_module_1.ClientsModule,
-            mongoose_1.MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse?retryWrites=true&w=majority"),
+            mongoose_1.MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse"),
             auth_module_1.AuthModule,
             users_module_1.UsersModule,
         ],

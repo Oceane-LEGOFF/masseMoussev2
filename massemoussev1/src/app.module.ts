@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BeerController } from './beer/beer.controller';
-import { BeerService } from './beer/beer.service';
 import { BeerModule } from './beer/beer.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
@@ -17,7 +15,7 @@ import { ClientsModule } from './clients/clients.module';
   imports: [
     BeerModule, 
     ClientsModule,
-    MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse?retryWrites=true&w=majority"),
+    MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse"),
     AuthModule,
     UsersModule,
   ],

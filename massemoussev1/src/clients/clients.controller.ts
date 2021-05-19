@@ -30,7 +30,7 @@ export class ClientsController {
     }
 
     @Get('/search')   
-    getBeers2(@Query('search') letters:string){
+    getClients2(@Query('search') letters:string){
         const client = this.clientsService.filterByLetters(letters);
         console.log('lettre', [client]);
         return client;

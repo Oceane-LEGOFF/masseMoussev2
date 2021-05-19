@@ -23,7 +23,7 @@ let ClientsService = class ClientsService {
     }
     async getClients() {
         const clients = await this.clientsModel.find().exec();
-        return clients.map((cli) => ({
+        return clients.map((cli) => ({ id: cli.id,
             name: cli.name,
             prenom: cli.prenom,
             naissance: cli.naissance,

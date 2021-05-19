@@ -23,8 +23,8 @@ let BeerController = class BeerController {
         this.beerService = beerService;
     }
     async getAllBeers() {
-        console.log('ensemble des bières présente dans la db');
         const beers = await this.beerService.getBeers();
+        console.log('ensemble des bières présente dans la db', beers);
         return beers;
     }
     getBeers(beerId) {

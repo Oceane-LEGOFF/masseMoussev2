@@ -1,9 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-
 import { Model } from 'mongoose';
-
-
 import {Clients} from './clients.modele'
 
 @Injectable()
@@ -14,7 +11,7 @@ export class ClientsService {
 
     async getClients() {
         const clients = await this.clientsModel.find().exec();
-        return clients.map((cli) => ({
+        return clients.map((cli) => ({id: cli.id,
             name: cli.name, 
             prenom: cli.prenom,
             naissance:cli.naissance, 

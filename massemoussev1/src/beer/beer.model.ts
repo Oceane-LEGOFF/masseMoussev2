@@ -1,6 +1,4 @@
-import { Prop } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
-import { Schema} from 'mongoose'; 
 
 export const BeerSchema = new mongoose.Schema({ // Schema mapé à une collection MongoDB et définit la forme des documents au sein de la collection
   id: {type: String, require: true},

@@ -1,9 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { stat } from 'fs';
 import { Model } from 'mongoose';
-
-
 import { Beer} from './beer.model'
 
 @Injectable()
