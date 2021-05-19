@@ -43,5 +43,6 @@ xhr.onreadystatechange = function () {
 };
 xhr.send();
 
-
 }
+
+loadDoc();
