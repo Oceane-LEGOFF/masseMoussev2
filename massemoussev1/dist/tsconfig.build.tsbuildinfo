@@ -1737,7 +1737,7 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.controller.ts": {
-        "version": "3bab5cc3970df56e2c7fba95158fbe5fea13a92aefeb44955bf47293984246cb",
+        "version": "5e3d5eb93925173598bbdeb4460ef0a9004117d76b409df7a3cca4596bf15692",
         "signature": "a8eea2eac8f5d45388411ac3508fcfca882af28828586e999e95a6b53afa8d40",
         "affectsGlobalScope": false
       },

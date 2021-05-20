@@ -77,7 +77,6 @@ __decorate([
 ], ClientsController.prototype, "getClients2", null);
 __decorate([
     common_1.Post(),
-    common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),
     __param(0, common_1.Body('id')),
     __param(1, common_1.Body('name')),
     __param(2, common_1.Body('prenom ')),

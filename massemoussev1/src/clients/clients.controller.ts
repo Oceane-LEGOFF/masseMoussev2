@@ -60,7 +60,7 @@ export class ClientsController {
 
 
     @Post()
-    @UseGuards(JwtAuthGuard)
+    // @UseGuards(JwtAuthGuard)
     // @Roles(Role.Admin)
     async addBeer(
         @Body('id') cliid: string,
