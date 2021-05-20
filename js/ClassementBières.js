@@ -20,22 +20,32 @@ $(function(){
 
 
 function loadDoc() {
-	
-var input = document.getElementById("site-search").value;
-var xhr = new XMLHttpRequest(),
+
+	var div = document.getElementById('8mort6blesse');
+	var input = document.getElementById("site-search").value;
+	var xhr = new XMLHttpRequest(),
     method = "GET",
     url = 'http://localhost:3000/beer/search?search=' + input;
 
-xhr.open(method, url, true);
-var div = document.getElementById('8mort6blesse');
-div.innerText = "";
-xhr.onreadystatechange = function () {
-  if(xhr.readyState === 4 && xhr.status === 200) {
-	var sheesh = JSON.parse(xhr.responseText);
-	sheesh.forEach(element => {
-		div.innerText += (element.name);
-	});
-  }
+	xhr.open(method, url, true);
+	xhr.onreadystatechange = function () {
+  	if(xhr.readyState === 4 && xhr.status === 200) {
+		div.innerHTML = "";
+		var sheesh = JSON.parse(xhr.responseText);
+		sheesh.forEach(element => {
+			var name = element.name;
+			var price = ", " + element.price + " $ : ";
+			var desc = element.description;
+			var imgUrl = element.photo;
+			var txt = document.createElement('p');
+			var img = document.createElement('img');
+			txt.innerText = name + price + desc;
+			img.src = imgUrl;
+			img.style.height = '200px';
+			div.appendChild(txt);
+			div.appendChild(img);
+		});
+  	}
 };
 xhr.send();
 }
