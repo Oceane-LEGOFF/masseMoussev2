@@ -45,6 +45,7 @@ export class BeerController {
         @Body('city') beeCity: string,
         @Body('state ') beeState: string,
         @Body('price') beePrice: string,
+        @Body('photo') beePhoto: string,
         
         
     ){
@@ -54,6 +55,7 @@ export class BeerController {
             beeCity,
             beeState,
             beePrice,
+            beePhoto
         );
         return { id: generatedId };
       }
@@ -67,6 +69,7 @@ export class BeerController {
         @Body('city') beeCity: string,
         @Body('state') beeState: string,
         @Body('price') beePrice: string,
+        @Body('photo') beePhoto: string,
        
       ){
           await this.beerService.updateBeer(
@@ -74,7 +77,8 @@ export class BeerController {
             beeName,
             beeCity,
             beeState,
-            beePrice
+            beePrice,
+            beePhoto
             )
           return null;
       }

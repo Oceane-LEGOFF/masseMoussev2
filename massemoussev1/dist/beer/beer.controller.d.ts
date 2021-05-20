@@ -8,6 +8,7 @@ export declare class BeerController {
         city: string;
         state: string;
         price: string;
+        photo: string;
     }[]>;
     getBeers(beerId: string): Promise<{
         id: any;
@@ -15,11 +16,12 @@ export declare class BeerController {
         city: any;
         state: any;
         price: any;
+        photo: any;
     }>;
     getBeers1(name: string): Promise<import("./beer.model").Beer[]>;
     getBeers2(letters: string): Promise<import("./beer.model").Beer[]>;
-    addBeer(beeId: string, beeName: string, beeCity: string, beeState: string, beePrice: string): Promise<{
+    addBeer(beeId: string, beeName: string, beeCity: string, beeState: string, beePrice: string, beePhoto: string): Promise<{
         id: string;
     }>;
-    updateBeer(beeId: string, beeName: string, beeCity: string, beeState: string, beePrice: string): Promise<any>;
+    updateBeer(beeId: string, beeName: string, beeCity: string, beeState: string, beePrice: string, beePhoto: string): Promise<any>;
 }

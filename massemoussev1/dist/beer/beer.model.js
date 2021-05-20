@@ -7,5 +7,6 @@ exports.BeerSchema = new mongoose.Schema({
     city: { type: String, require: true },
     state: { type: String, require: true },
     price: { type: String, require: true },
+    photo: { type: String, require: true }
 });
 //# sourceMappingURL=beer.model.js.map

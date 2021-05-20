@@ -27,7 +27,8 @@ let BeerService = class BeerService {
             name: ber.name,
             city: ber.city,
             state: ber.state,
-            price: ber.price
+            price: ber.price,
+            photo: ber.photo
         }));
     }
     async getBeers1() {
@@ -36,7 +37,8 @@ let BeerService = class BeerService {
             name: ber.name,
             city: ber.city,
             state: ber.state,
-            price: ber.price }));
+            price: ber.price,
+            photo: ber.photo }));
     }
     async getBeers2() {
         const beers = await this.beerModel.find().exec();
@@ -44,7 +46,8 @@ let BeerService = class BeerService {
             name: ber.name,
             city: ber.city,
             state: ber.state,
-            price: ber.price }));
+            price: ber.price,
+            photo: ber.photo }));
     }
     async getSingleBeerById(beerId) {
         const beer = await this.findBeerById(beerId);
@@ -53,7 +56,8 @@ let BeerService = class BeerService {
             name: beer.name,
             city: beer.city,
             state: beer.state,
-            price: beer.price };
+            price: beer.price,
+            photo: beer.photo };
     }
     async findBeerById(id) {
         let beer;
@@ -75,13 +79,13 @@ let BeerService = class BeerService {
         console.log('Voici les beers contenant la lettre', letters, beersL);
         return beersL;
     }
-    async inserBeer(id, name, city, state, price) {
+    async inserBeer(id, name, city, state, price, photo) {
         const newBeer = new this.beerModel({ id, name, city, state, price });
         const result = await newBeer.save();
         console.log(result);
         return result.id;
     }
-    async updateBeer(id, name, city, state, price) {
+    async updateBeer(id, name, city, state, price, photo) {
         const updateBeer = await this.findBeerById(id);
         if (id) {
             updateBeer.id = id;
@@ -97,6 +101,9 @@ let BeerService = class BeerService {
         }
         if (price) {
             updateBeer.price = price;
+        }
+        if (photo) {
+            updateBeer.photo = photo;
         }
         updateBeer.save();
     }

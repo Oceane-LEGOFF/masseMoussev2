@@ -5,4 +5,5 @@ export interface Beer extends mongoose.Document {
     city: string;
     state: string;
     price: string;
+    photo: string;
 }

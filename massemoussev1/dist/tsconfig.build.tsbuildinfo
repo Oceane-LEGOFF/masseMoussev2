@@ -1692,18 +1692,18 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.model.ts": {
-        "version": "ee7993c7cec3a691730de2f2a6048b23339fc6da2c22ffd44cf1c74ac19eb424",
-        "signature": "ad123b8f5d4b02271967a16d58faa356ccb16a7d060ff9afd5faa1d37fe9bb3a",
+        "version": "f13750fd80d099776e3513460486c7c4b32499aef59ee3892e04cea8c607ffa0",
+        "signature": "11221ea5868694abd5eb33114e9f262916aa9cf2be85964d897bad2c1fc80631",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.service.ts": {
-        "version": "11868c974775b808628721e5da012297334aed80e5baea635eb8353d62265e57",
-        "signature": "096194cc26269a797847b7a5c6a63fe912e0fed9b45097a66ce910a446179538",
+        "version": "c142c7fa50769581484ffd293f93f221c803329815cf7ac2288028f348ba4009",
+        "signature": "1a0781cfd5f51ffe67a514a66b84ac6847481421ea90c3b0a570b964268ad116",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "48ec7051e6dc04e6b68c8c6b44e9f4b0a06b02b7525764491c2c960e15165fac",
-        "signature": "e4fa79f81e65a9f280c6191a311d387c60ab603f69f300ede61ad9fee27e79af",
+        "version": "b4d98d2b82d560910cc65f0cb4aa47fbffbe97651eb61c3d7b35d226b1b94949",
+        "signature": "1f4fe8783898aecaf034d2c9d7fafdc2106c31f11e4871924608cee9c3fe82c7",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.module.ts": {
