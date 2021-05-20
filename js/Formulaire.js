@@ -97,7 +97,6 @@ function VerifCompte() {
       method = "POST"
       URL = 'http://localhost:3000/clients/searchM=search' + email;
   
-  alert("test")
   xhr.open(method, url, true);
   xhr.onreadystatechange = function () {
     if(xhr.readyState === 4 && xhr.status === 200 && xhr2 === xhr) {
