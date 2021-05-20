@@ -1692,18 +1692,18 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.model.ts": {
-        "version": "f7a3802df124b16828006b036e78ee91a5c169b9f1ad6875169aa6a3a4c743de",
-        "signature": "411f25360ed6af3cf3490d2f59dfc3001a96b945ce55de8e2b1766a21e109c67",
+        "version": "ee7993c7cec3a691730de2f2a6048b23339fc6da2c22ffd44cf1c74ac19eb424",
+        "signature": "ad123b8f5d4b02271967a16d58faa356ccb16a7d060ff9afd5faa1d37fe9bb3a",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.service.ts": {
-        "version": "bc0c8959f0d439aecc354c7f1ce2e1f5425ea532c20cfde91fa72247417c2054",
-        "signature": "bfc69ce4550b5f9441bc17300d90c30bd9e80059156b6e02ced70140cf731ec8",
+        "version": "11868c974775b808628721e5da012297334aed80e5baea635eb8353d62265e57",
+        "signature": "096194cc26269a797847b7a5c6a63fe912e0fed9b45097a66ce910a446179538",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "ca34fc95460a513ff1db7d490e19ebaa726ad9ba51c651d92105ac4da86e8783",
-        "signature": "5db38fc3db9ba7eaf77aaa0bb5d598dbe3ba31329299c43e11e84972c1fa117c",
+        "version": "48ec7051e6dc04e6b68c8c6b44e9f4b0a06b02b7525764491c2c960e15165fac",
+        "signature": "e4fa79f81e65a9f280c6191a311d387c60ab603f69f300ede61ad9fee27e79af",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.module.ts": {
@@ -2145,6 +2145,11 @@
         "version": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "signature": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "affectsGlobalScope": false
+      },
+      "../../../../../../../../node_modules/@types/zen-observable/index.d.ts": {
+        "version": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
+        "signature": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
+        "affectsGlobalScope": true
       }
     },
     "options": {

@@ -40,48 +40,20 @@ export class BeerController {
     @UseGuards(JwtAuthGuard)
     // @Roles(Role.Admin)
     async addBeer(
-        @Body('id') beeid: string,
-        @Body('obdb_id') beeobdb_id: string,
-        @Body('title ') betitle: string,
-        @Body('name') beename: string,
-        @Body('brewery_type') beebrewery_type: string,
-        @Body('street') beestreet: string,
-        @Body('adresse_2') beeadresse_2: string,
-        @Body('adresse_3') beeadresse_3: string,
-        @Body('city') beecity: string,
-        @Body('state') beestate: string,
-        @Body('country_province') beecountry_province: string,
-        @Body('postal_code') beepostal_code: string,
-        @Body('country') beecountry: string,
-        @Body('longitude') beelongitude: string,
-        @Body('latitude') beelatitude: string,
-        @Body('phone') beephone: string,
-        @Body('website_url') beewebsite_url: string,
-        @Body('update_at') beeupdate_at: string,
-        @Body('created_at') beecreated_at: string,
+        @Body('id') beeId: string,
+        @Body('name') beeName: string,
+        @Body('city') beeCity: string,
+        @Body('state ') beeState: string,
+        @Body('price') beePrice: string,
+        
         
     ){
         const generatedId = await  this.beerService.inserBeer(
-            beeid,
-            beeobdb_id,
-            betitle,
-            beename,
-            beebrewery_type,
-            beestreet,
-            beeadresse_2,
-            beeadresse_3,
-            beecity,
-            beestate,
-            beecountry_province,
-            beepostal_code,
-            beecountry,
-            beelongitude,
-            beelatitude,
-            beephone,
-            beewebsite_url,
-            beeupdate_at,
-            beecreated_at
-            
+            beeId,
+            beeName,
+            beeCity,
+            beeState,
+            beePrice,
         );
         return { id: generatedId };
       }
@@ -89,47 +61,21 @@ export class BeerController {
     //   @Roles(Role.Admin)
       @Patch(':id')
       @UseGuards(JwtAuthGuard)
-
       async updateBeer(
-        @Param('id') beeid: string,
-        @Body('obdb_id') beeobdb_id: string,
-        @Body('title ') betitle: string,
-        @Body('name') beename: string,
-        @Body('brewery_type') beebrewery_type: string,
-        @Body('street') beestreet: string,
-        @Body('adresse_2') beeadresse_2: string,
-        @Body('adresse_3') beeadresse_3: string,
-        @Body('city') beecity: string,
-        @Body('state') beestate: string,
-        @Body('country_province') beecountry_province: string,
-        @Body('postal_code') beepostal_code: string,
-        @Body('country') beecountry: string,
-        @Body('longitude') beelongitude: string,
-        @Body('latitude') beelatitude: string,
-        @Body('phone') beephone: string,
-        @Body('website_url') beewebsite_url: string,
-        @Body('update_at') beeupdate_at: string,
-        @Body('created_at') beecreated_at: string,
+        @Param('id') beeId: string,
+        @Body('name') beeName: string,
+        @Body('city') beeCity: string,
+        @Body('state') beeState: string,
+        @Body('price') beePrice: string,
+       
       ){
-          await this.beerService.updateBeer(beeid,
-            beeobdb_id,
-            betitle,
-            beename,
-            beebrewery_type,
-            beestreet,
-            beeadresse_2,
-            beeadresse_3,
-            beecity,
-            beestate,
-            beecountry_province,
-            beepostal_code,
-            beecountry,
-            beelongitude,
-            beelatitude,
-            beephone,
-            beewebsite_url,
-            beeupdate_at,
-            beecreated_at)
+          await this.beerService.updateBeer(
+            beeId,
+            beeName,
+            beeCity,
+            beeState,
+            beePrice
+            )
           return null;
       }
   

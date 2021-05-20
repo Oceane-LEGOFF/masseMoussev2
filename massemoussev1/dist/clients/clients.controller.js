@@ -64,14 +64,14 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ClientsController.prototype, "getClients", null);
 __decorate([
-    common_1.Get('/searchN'),
+    common_1.Get('/searchM'),
     __param(0, common_1.Query('search')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ClientsController.prototype, "getClients3", null);
 __decorate([
-    common_1.Get('/searchM'),
+    common_1.Get('/searchN'),
     __param(0, common_1.Query('search')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
