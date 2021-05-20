@@ -83,3 +83,25 @@ inpMdp.addEventListener("input", function(e) {
     check.mdp = true;
   }
 });
+
+
+function VerifCompte() {
+	
+  var email = document.getElementById("email").value;
+  var xhr = new XMLHttpRequest(),
+      method = "GET",
+      URL = 'http://localhost:3000/clients/email?email=' + email;
+  
+  xhr.open(method, url, true);
+  xhr.onreadystatechange = function () {
+    if(xhr.readyState === 4 && xhr.status === 200) {
+      
+    }
+    else {
+      alert("Compte inexistant");
+    }
+  };
+  xhr.send();
+  }
+
+

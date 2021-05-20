@@ -18,10 +18,6 @@ $(function(){
 	});
 });
 
-//function getValue() {
-    // Sélectionner l'élément input et récupérer sa valeur
-//    var input = document.getElementById("site-search").value;
-//}
 
 function loadDoc() {
 	
