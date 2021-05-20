@@ -95,7 +95,7 @@ function VerifCompte() {
 
   var xhr2 = new XMLHttpRequest(),
       method = "POST"
-      URL = 'http://localhost:3000/clients/searchM=search' + email;
+      URL = 'http://localhost:3000/clients/";
   
   xhr.open(method, url, true);
   xhr.onreadystatechange = function () {
@@ -110,3 +110,20 @@ function VerifCompte() {
   }
 
 
+function creationClient() {
+  var xhr = new XMLHttpRequest();
+xhr.open("POST", 'http://localhost:3000/clients/', true);
+
+//Envoie les informations du header adaptées avec la requête
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+xhr.onreadystatechange = function() { //Appelle une fonction au changement d'état.
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        console.log("envoyé");
+    }
+}
+xhr.send("foo=bar&lorem=ipsum");
+// xhr.send(new Int8Array());
+// xhr.send(document);
+
+}

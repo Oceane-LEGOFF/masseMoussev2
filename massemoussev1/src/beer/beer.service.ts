@@ -44,16 +44,16 @@ export class BeerService {
             description: ber.description}))
     }
 
-    async getSingleBeerById(beerId: string): Promise<{ id: any; name: any, city: any, state: any, price: any, photo: any}>{
+    async getSingleBeerById(beerId: string): Promise<{ id: any; name: any, city: any, state: any, price: any, photo: any, description: any}>{
         const beer = await this.findBeerById(beerId);
         console.log('beer', beer);
-        return {id: ber.id, 
-            name: ber.name,
-            city: ber.city,
-            state: ber.state,
-            price: ber.price,
-            photo: ber.photo,
-            description: ber.description} 
+        return {id: beer.id, 
+            name: beer.name,
+            city: beer.city,
+            state: beer.state,
+            price: beer.price,
+            photo: beer.photo,
+            description: beer.description} 
     }
 
     private async findBeerById (id: string): Promise <Beer>{
@@ -89,7 +89,7 @@ export class BeerService {
         description: string
     )
     {
-        const newBeer = new this.beerModel({id, name, city, state, price});
+        const newBeer = new this.beerModel({id, name, city, state, price, photo, description});
         const result = await newBeer.save();
         console.log(result);
         return result.id as string;
