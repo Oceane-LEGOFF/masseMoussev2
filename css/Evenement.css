@@ -22,9 +22,79 @@ img {
   display: flex;
   align-items: flex-end;
   float: right;
-  height: 250px;
+  height: 200px;
 }
 h4 {
   margin-top: 40px;
   text-align: center;
+}
+
+@media screen and (max-width: 458px) {
+  .sec {
+    display: flex;
+    flex-direction: column;
+    max-width: 390px;
+  }
+  h4 {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .imgR {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sec {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  h4 {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .imgR {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+  }
+  h4 {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .imgR {
+    height: 150px;
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .sec {
+    display: flex;
+    flex-direction: column;
+    max-width: 850px;
+  }
+  h4 {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .imgR {
+    height: 150px;
+  }
+}
+@media screen and(min-width: 1100px) {
+  .sec {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+  }
+  h4 {
+    margin-top: 40px;
+    text-align: center;
+  }
 }

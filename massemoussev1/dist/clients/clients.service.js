@@ -160,6 +160,9 @@ let ClientsService = class ClientsService {
         }
         updateClient.save();
     }
+    async findOne(mail) {
+        return this.clientsModel.find(clients => clients.mail === mail);
+    }
 };
 ClientsService = __decorate([
     common_1.Injectable(),

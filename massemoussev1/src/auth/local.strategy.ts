@@ -2,6 +2,7 @@ import { Strategy } from 'passport-local';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { AuthService } from './auth.service';
+import { Client, ClientsService } from 'src/clients/clients.service'
 
 // stratégie d'authentification en local 
 
@@ -11,8 +12,8 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
     super(); // constructor appel super sans objet d'option. Il prend user et password 
   }
 
-  async validate(username: string, password: string, admin: string): Promise<any> { // méthode validate avec comme signature (username et password)
-    const user = await this.authService.validateUser(username, password, admin);
+  async validate(mail: string, mdp: string): Promise<Client> { // méthode validate avec comme signature (username et password)
+    const user = await this.authService.validateUser(mail, mdp);
     if (!user) {
       throw new UnauthorizedException();
     }

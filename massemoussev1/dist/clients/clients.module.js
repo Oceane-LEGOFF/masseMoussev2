@@ -24,6 +24,9 @@ ClientsModule = __decorate([
         ],
         providers: [
             clients_service_1.ClientsService
+        ],
+        exports: [
+            clients_service_1.ClientsService
         ]
     })
 ], ClientsModule);

@@ -12,11 +12,8 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const beer_module_1 = require("./beer/beer.module");
 const auth_module_1 = require("./auth/auth.module");
-const users_module_1 = require("./users/users.module");
 const mongoose_1 = require("@nestjs/mongoose");
 require("reflect-metadata");
-const roles_guards_1 = require("./role/roles.guards");
-const core_1 = require("@nestjs/core");
 const clients_module_1 = require("./clients/clients.module");
 let AppModule = class AppModule {
 };
@@ -27,17 +24,12 @@ AppModule = __decorate([
             clients_module_1.ClientsModule,
             mongoose_1.MongooseModule.forRoot("mongodb+srv://Gauthier:Car3dinal@cluster0.9a3kd.mongodb.net/massemousse"),
             auth_module_1.AuthModule,
-            users_module_1.UsersModule,
         ],
         controllers: [
             app_controller_1.AppController,
         ],
         providers: [
             app_service_1.AppService,
-            {
-                provide: core_1.APP_GUARD,
-                useClass: roles_guards_1.RolesGuard
-            }
         ],
     })
 ], AppModule);

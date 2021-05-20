@@ -22,23 +22,25 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
-const users_service_1 = require("../users/users.service");
 const jwt_1 = require("@nestjs/jwt");
+const clients_service_1 = require("../clients/clients.service");
 let AuthService = class AuthService {
-    constructor(userService, jwtService) {
-        this.userService = userService;
+    constructor(clientsService, jwtService) {
+        this.clientsService = clientsService;
         this.jwtService = jwtService;
     }
-    async validateUser(username, pass, admin) {
-        const user = await this.userService.findOne(username);
-        if (user && user.password === pass, admin) {
-            const { password } = user, result = __rest(user, ["password"]);
+    async validateUser(mail, mdp) {
+        const user = await this.clientsService.findOne(mail);
+        if (user && user.mdp === mdp, mail) {
+            const { mdp } = user, result = __rest(user, ["mdp"]);
+            console.log(user, "users");
             return result;
         }
         return null;
     }
-    async login(user) {
-        const playload = { username: user.username, sub: user.userId, admin: user.admin };
+    async login(client) {
+        const playload = { mail: client.mail, mdp: client.mdp };
+        console.log('playload', playload);
         return {
             access_token: this.jwtService.sign(playload),
         };
@@ -46,7 +48,7 @@ let AuthService = class AuthService {
 };
 AuthService = __decorate([
     common_1.Injectable(),
-    __metadata("design:paramtypes", [users_service_1.UsersService,
+    __metadata("design:paramtypes", [clients_service_1.ClientsService,
         jwt_1.JwtService])
 ], AuthService);
 exports.AuthService = AuthService;
