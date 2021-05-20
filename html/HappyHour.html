@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand" href="HappyHour.html">MasseMousse</a>
+            <a class="navbar-brand" href="../index.html">MasseMousse</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -42,20 +42,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="HappyHour.html" class="nav-link smoothScroll">Home</a>
+                        <a href="#about" class="nav-link smoothScroll">La map</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">About Us</a>
+                        <a href="#class" class="nav-link smoothScroll">Acces aux autres pages</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#class" class="nav-link smoothScroll">Classes</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
-                    </li>
+                    
                 </ul>
             </div>
 
@@ -73,7 +67,9 @@
 
                          <div class="col-lg-8 col-md-10 mx-auto col-12">
                             <div class="hero-text mt-5 text-center">
-                                <h6 data-aos="fade-up" data-aos-delay="300">Les Happy Hours près de chez toi !</h6>
+                                <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Les Happy Hours près de chez toi !</h1>
+                                <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up"
+                                data-aos-delay="700">drink more</a>
                             </div>
                          </div>
 
@@ -83,9 +79,9 @@
 
      <!-- ABOUT -->
      <section class="about section" id="about">
-        <div class="container">
+        <div class="container" style ="display: block; margin-left: auto; margin-right: auto;">
              <div class="row">
-                <div id='map' style='width: 1000px; height: 700px; '></div>
+                <div id='map' style='width: 1000px; height: 700px;'></div>
                 <script>
                 mapboxgl.accessToken = 'pk.eyJ1Ijoia2FudmFsNzgiLCJhIjoiY2tvbzBpdGphMDZ4NzJ5bnVwN2Y1enBybyJ9.K0vIiOWSqcRol2WqX-vVCg'; // replace this with your access token
                 var map = new mapboxgl.Map({
@@ -152,10 +148,22 @@
                                 <div class="class-thumb">
                                         <a href="../index.html">
 
-                                    <img src="../images/class/home.jpg" class="img-fluid" alt="Class">
+                                    <img src="../images/acceuil_bouton.jpeg" class="img-fluid" alt="Class">
 </a>
                                     <div class="class-info">
-                                        <h3 class="mb-1">HappyHour</h3>
+                                        <h3 class="mb-1">Acceuil</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                        <a href="../html/Evenement.html">
+
+                                    <img src="../images/Evenement/bouton_evenement.jpeg" class="img-fluid" alt="Class" style="width: 50cm;">
+</a>
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Évenement</h3>
                                     </div>
                                 </div>
                             </div>

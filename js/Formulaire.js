@@ -90,14 +90,20 @@ function VerifCompte() {
   var email = document.getElementById("email").value;
   var xhr = new XMLHttpRequest(),
       method = "GET",
-      URL = 'http://localhost:3000/clients/email?email=' + email;
+      URL = 'http://localhost:3000/clients/searchM=search' + email;
+
+
+  var xhr2 = new XMLHttpRequest(),
+      method = "POST"
+      URL = 'http://localhost:3000/clients/searchM=search' + email;
   
+  alert("test")
   xhr.open(method, url, true);
   xhr.onreadystatechange = function () {
-    if(xhr.readyState === 4 && xhr.status === 200) {
-      
+    if(xhr.readyState === 4 && xhr.status === 200 && xhr2 === xhr) {
+      alert("ca fonctionne")
     }
-    else {
+    else if (email != getClients.email ) {
       alert("Compte inexistant");
     }
   };

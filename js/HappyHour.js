@@ -1,3 +1,4 @@
+
 console.log('inside init')
 function init() {
     const paris = {
@@ -62,8 +63,8 @@ marker.bindPopup("<b>Le Kitch</b><br>HappyHour de 17h à 21h à 5€<br>10 rue O
 marker = L.marker([48.8799303,2.3704165], {icon : beerIconNB}).addTo(map);
 marker.bindPopup("<b>La Maison</b><br>HappyHour de 17h à 21h à 4€<br>65 Boulevard de la Villette, 75019 Paris").openPopup();
 marker = L.marker([48.8333616,2.353938], {icon : beerIconNB}).addTo(map);
-marker.bindPopup("<b>La Maison</b><br>HappyHour de 17h à 21h à 5,50€<br>62 avenue des Gobelins, 75013 Paris").openPopup();
-marker = L.marker([48.8656828,2.3846983], {icon : beerIconNB}).addTo(map);
+//marker.bindPopup("<b>La Maison</b><br>HappyHour de 17h à 21h à 5,50€<br>62 avenue des Gobelins, 75013 Paris").openPopup();
+//marker = L.marker([48.8656828,2.3846983], {icon : beerIconNB}).addTo(map);
 marker.bindPopup("<b>Le Mo'Town</b><br>HappyHour de 17h à 22h à 3,50€<br>116 Boulevard de Ménilmontant, 75020 Paris").openPopup();
 marker = L.marker([48.8564018,2.3624948], {icon : beerIconNB}).addTo(map);
 marker.bindPopup("<b>Le Piment Café</b><br>HappyHour de 18h à 21h à 3,50€<br>15 Rue de Sévigné, 75004 Paris").openPopup();
@@ -72,17 +73,17 @@ marker.bindPopup("<b>ACT 21</b><br>HappyHour de 18h à 21h à 5€<br>5 rue Sauv
 marker = L.marker([48.8671573,2.3753889], {icon : beerIconNB}).addTo(map);
 marker.bindPopup("<b>L'Orange Mécanique</b><br>HappyHour de 18h à 20h à 4€b<br>72 Bis Rue Jean-Pierre Timbaud, 75011 Paris").openPopup();
 marker = L.marker([48.8869539,2.3474488], {icon : beerIconNB}).addTo(map);
-marker.bindPopup("<b>Au Clair de la Lune</b><br>HappyHour de 18h à 22h à 3,50€<br>1 Rue Ramey, 75018 Paris").openPopup();
+marker.bindPopup("<b>Au Clair de la Lune</b><br>HappyHour de 18h à 22h à 3,50€<br>name  ").openPopup();
 marker = L.marker([48.8768310546875,2.3354170322418213], {icon : beerIconNB}).addTo(map);
 marker.bindPopup("<b>CHEZ BIBI</b><br>HappyHour de 18h à 22h à 4€<br>9 rue Saint Lazare, 75009 Paris").openPopup();
 marker = L.marker([48.8624452,2.352598], {icon : beerIconNB}).addTo(map);
-marker.bindPopup("<b>Le Bistrot de l'Horloge</b><br>Hour tous les jours de 17h00 à  00h00 à 3,50€<br>7 rue Bernard de Clairvaux, 75003 Paris").openPopup();
+marker.bindPopup("<b>Le Bistrot de l'Horloge</b><br>HappyHour de 17h à 00h à 3,50€<br>7 rue Bernard de Clairvaux, 75003 Paris").openPopup();
 marker = L.marker([48.8534008,2.3665925], {icon : beerIconNB}).addTo(map);
-marker.bindPopup("<b>Le Rempart</b><br>Hour tous les jours de 16h00 à  23h00 à 4,50€<br>15 rue Saint Antoine, 75004 Paris").openPopup();
+marker.bindPopup("<b>Le Rempart</b><br>HappyHour de 16h à 23h à 4,50€<br>15 rue Saint Antoine, 75004 Paris").openPopup();
 marker = L.marker([48.8514857,2.3379094], {icon : beerIconNB}).addTo(map);
-marker.bindPopup("<b>Fubar</b><br>Happy Hour tous les jours de 14h00 à 22h00 à 3,50€<br>5 rue Saint Sulpice, 75006 Paris").openPopup();
+marker.bindPopup("<b>Fubar</b><br>HappyHour de 14h à 22h à 3,50€<br>5 rue Saint Sulpice, 75006 Paris").openPopup();
 marker = L.marker([48.8765997,2.3232513], {icon : beerIconNB}).addTo(map);
-marker.bindPopup("<b>Le Pub 27</b><br>Happy Hour tous les jours de 15h00 à 19h00 à 5€<br>27 Rue de Rome, 75008 Paris").openPopup();
+marker.bindPopup("<b>Le Pub 27</b><br>HappyHour de 15h à 19h à 5€<br>27 Rue de Rome, 75008 Paris").openPopup();
 
 if (hour >= 16 && hour <= 22){
     marker = L.marker([48.8859366,2.2911862], {icon : beerIcon}).addTo(map);
