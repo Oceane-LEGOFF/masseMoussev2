@@ -1,0 +1,30 @@
+body {
+  background-color: tan;
+}
+.head {
+  text-align: center;
+  margin-top: 100px;
+}
+.sec {
+  display: flex;
+  align-items: flex-end;
+
+  border: solid transparent;
+  box-shadow: 10px 10px 10px 10px ghostwhite;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  float: left;
+  background-color: beige;
+}
+img {
+  display: flex;
+  align-items: flex-end;
+  float: right;
+  height: 250px;
+}
+h4 {
+  margin-top: 40px;
+  text-align: center;
+}
