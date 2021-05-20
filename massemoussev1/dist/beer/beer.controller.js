@@ -41,12 +41,12 @@ let BeerController = class BeerController {
         console.log('lettre', [beers]);
         return beers;
     }
-    async addBeer(beeid, beeobdb_id, betitle, beename, beebrewery_type, beestreet, beeadresse_2, beeadresse_3, beecity, beestate, beecountry_province, beepostal_code, beecountry, beelongitude, beelatitude, beephone, beewebsite_url, beeupdate_at, beecreated_at) {
-        const generatedId = await this.beerService.inserBeer(beeid, beeobdb_id, betitle, beename, beebrewery_type, beestreet, beeadresse_2, beeadresse_3, beecity, beestate, beecountry_province, beepostal_code, beecountry, beelongitude, beelatitude, beephone, beewebsite_url, beeupdate_at, beecreated_at);
+    async addBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto) {
+        const generatedId = await this.beerService.inserBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto);
         return { id: generatedId };
     }
-    async updateBeer(beeid, beeobdb_id, betitle, beename, beebrewery_type, beestreet, beeadresse_2, beeadresse_3, beecity, beestate, beecountry_province, beepostal_code, beecountry, beelongitude, beelatitude, beephone, beewebsite_url, beeupdate_at, beecreated_at) {
-        await this.beerService.updateBeer(beeid, beeobdb_id, betitle, beename, beebrewery_type, beestreet, beeadresse_2, beeadresse_3, beecity, beestate, beecountry_province, beepostal_code, beecountry, beelongitude, beelatitude, beephone, beewebsite_url, beeupdate_at, beecreated_at);
+    async updateBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto) {
+        await this.beerService.updateBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto);
         return null;
     }
 };
@@ -81,52 +81,26 @@ __decorate([
     common_1.Post(),
     common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),
     __param(0, common_1.Body('id')),
-    __param(1, common_1.Body('obdb_id')),
-    __param(2, common_1.Body('title ')),
-    __param(3, common_1.Body('name')),
-    __param(4, common_1.Body('brewery_type')),
-    __param(5, common_1.Body('street')),
-    __param(6, common_1.Body('adresse_2')),
-    __param(7, common_1.Body('adresse_3')),
-    __param(8, common_1.Body('city')),
-    __param(9, common_1.Body('state')),
-    __param(10, common_1.Body('country_province')),
-    __param(11, common_1.Body('postal_code')),
-    __param(12, common_1.Body('country')),
-    __param(13, common_1.Body('longitude')),
-    __param(14, common_1.Body('latitude')),
-    __param(15, common_1.Body('phone')),
-    __param(16, common_1.Body('website_url')),
-    __param(17, common_1.Body('update_at')),
-    __param(18, common_1.Body('created_at')),
+    __param(1, common_1.Body('name')),
+    __param(2, common_1.Body('city')),
+    __param(3, common_1.Body('state ')),
+    __param(4, common_1.Body('price')),
+    __param(5, common_1.Body('photo')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String]),
+    __metadata("design:paramtypes", [String, String, String, String, String, String]),
     __metadata("design:returntype", Promise)
 ], BeerController.prototype, "addBeer", null);
 __decorate([
     common_1.Patch(':id'),
     common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),
     __param(0, common_1.Param('id')),
-    __param(1, common_1.Body('obdb_id')),
-    __param(2, common_1.Body('title ')),
-    __param(3, common_1.Body('name')),
-    __param(4, common_1.Body('brewery_type')),
-    __param(5, common_1.Body('street')),
-    __param(6, common_1.Body('adresse_2')),
-    __param(7, common_1.Body('adresse_3')),
-    __param(8, common_1.Body('city')),
-    __param(9, common_1.Body('state')),
-    __param(10, common_1.Body('country_province')),
-    __param(11, common_1.Body('postal_code')),
-    __param(12, common_1.Body('country')),
-    __param(13, common_1.Body('longitude')),
-    __param(14, common_1.Body('latitude')),
-    __param(15, common_1.Body('phone')),
-    __param(16, common_1.Body('website_url')),
-    __param(17, common_1.Body('update_at')),
-    __param(18, common_1.Body('created_at')),
+    __param(1, common_1.Body('name')),
+    __param(2, common_1.Body('city')),
+    __param(3, common_1.Body('state')),
+    __param(4, common_1.Body('price')),
+    __param(5, common_1.Body('photo')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String]),
+    __metadata("design:paramtypes", [String, String, String, String, String, String]),
     __metadata("design:returntype", Promise)
 ], BeerController.prototype, "updateBeer", null);
 BeerController = __decorate([

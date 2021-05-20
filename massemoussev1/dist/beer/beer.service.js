@@ -24,88 +24,40 @@ let BeerService = class BeerService {
     async getBeers() {
         const beers = await this.beerModel.find().exec();
         return beers.map((ber) => ({ id: ber.id,
-            obdb_id: ber.obdb_id,
-            title: ber.title, name: ber.name,
-            brewery_type: ber.brewery_type,
-            street: ber.street,
-            adresse_2: ber.adresse_2,
-            adresse_3: ber.adresse_3,
+            name: ber.name,
             city: ber.city,
             state: ber.state,
-            country_province: ber.country_province,
-            postal_code: ber.postal_code,
-            country: ber.country,
-            longiture: ber.longitude,
-            latitude: ber.latitude,
-            phone: ber.phone,
-            website_url: ber.website_url,
-            updated_at: ber.updated_at,
-            created_at: ber.created_at }));
+            price: ber.price,
+            photo: ber.photo
+        }));
     }
     async getBeers1() {
         const beers = await this.beerModel.find().exec();
         return beers.map((ber) => ({ id: ber.id,
-            obdb_id: ber.obdb_id,
-            title: ber.title, name: ber.name,
-            brewery_type: ber.brewery_type,
-            street: ber.street,
-            adresse_2: ber.adresse_2,
-            adresse_3: ber.adresse_3,
+            name: ber.name,
             city: ber.city,
             state: ber.state,
-            country_province: ber.country_province,
-            postal_code: ber.postal_code,
-            country: ber.country,
-            longiture: ber.longitude,
-            latitude: ber.latitude,
-            phone: ber.phone,
-            website_url: ber.website_url,
-            updated_at: ber.updated_at,
-            created_at: ber.created_at }));
+            price: ber.price,
+            photo: ber.photo }));
     }
     async getBeers2() {
         const beers = await this.beerModel.find().exec();
         return beers.map((ber) => ({ id: ber.id,
-            obdb_id: ber.obdb_id,
-            title: ber.title, name: ber.name,
-            brewery_type: ber.brewery_type,
-            street: ber.street,
-            adresse_2: ber.adresse_2,
-            adresse_3: ber.adresse_3,
+            name: ber.name,
             city: ber.city,
             state: ber.state,
-            country_province: ber.country_province,
-            postal_code: ber.postal_code,
-            country: ber.country,
-            longiture: ber.longitude,
-            latitude: ber.latitude,
-            phone: ber.phone,
-            website_url: ber.website_url,
-            updated_at: ber.updated_at,
-            created_at: ber.created_at }));
+            price: ber.price,
+            photo: ber.photo }));
     }
     async getSingleBeerById(beerId) {
         const beer = await this.findBeerById(beerId);
         console.log('beer', beer);
         return { id: beer.id,
-            obdb_id: beer.obdb_id,
-            title: beer.title,
             name: beer.name,
-            brewery_type: beer.brewery_type,
-            street: beer.street,
-            adresse_2: beer.adresse_2,
-            adresse_3: beer.adresse_3,
             city: beer.city,
             state: beer.state,
-            country_province: beer.country_province,
-            postal_code: beer.postal_code,
-            country: beer.country,
-            longiture: beer.longitude,
-            latitude: beer.latitude,
-            phone: beer.phone,
-            website_url: beer.website_url,
-            updated_at: beer.updated_at,
-            created_at: beer.created_at };
+            price: beer.price,
+            photo: beer.photo };
     }
     async findBeerById(id) {
         let beer;
@@ -127,37 +79,19 @@ let BeerService = class BeerService {
         console.log('Voici les beers contenant la lettre', letters, beersL);
         return beersL;
     }
-    async inserBeer(id, obdb_id, title, name, brewery_type, street, adresse_2, adresse_3, city, state, country_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at) {
-        const newBeer = new this.beerModel({ id, obdb_id, title, name, brewery_type, street, adresse_2, adresse_3, city, state, country_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at });
+    async inserBeer(id, name, city, state, price, photo) {
+        const newBeer = new this.beerModel({ id, name, city, state, price });
         const result = await newBeer.save();
         console.log(result);
         return result.id;
     }
-    async updateBeer(id, obdb_id, title, name, brewery_type, street, adresse_2, adresse_3, city, state, country_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at) {
+    async updateBeer(id, name, city, state, price, photo) {
         const updateBeer = await this.findBeerById(id);
         if (id) {
             updateBeer.id = id;
         }
-        if (obdb_id) {
-            updateBeer.obdb_id = obdb_id;
-        }
-        if (title) {
-            updateBeer.title = title;
-        }
         if (name) {
             updateBeer.name = name;
-        }
-        if (brewery_type) {
-            updateBeer.brewery_type = brewery_type;
-        }
-        if (street) {
-            updateBeer.street = street;
-        }
-        if (adresse_2) {
-            updateBeer.adresse_2 = adresse_2;
-        }
-        if (adresse_3) {
-            updateBeer.adresse_3 = adresse_3;
         }
         if (city) {
             updateBeer.city = city;
@@ -165,35 +99,11 @@ let BeerService = class BeerService {
         if (state) {
             updateBeer.state = state;
         }
-        if (country_province) {
-            updateBeer.country_province = country_province;
+        if (price) {
+            updateBeer.price = price;
         }
-        if (postal_code) {
-            updateBeer.postal_code = postal_code;
-        }
-        if (country) {
-            updateBeer.country = country;
-        }
-        if (longitude) {
-            updateBeer.longitude = longitude;
-        }
-        if (latitude) {
-            updateBeer.latitude = latitude;
-        }
-        if (phone) {
-            updateBeer.phone = phone;
-        }
-        if (phone) {
-            updateBeer.phone = phone;
-        }
-        if (website_url) {
-            updateBeer.website_url = website_url;
-        }
-        if (updated_at) {
-            updateBeer.updated_at = updated_at;
-        }
-        if (created_at) {
-            updateBeer.created_at = created_at;
+        if (photo) {
+            updateBeer.photo = photo;
         }
         updateBeer.save();
     }
