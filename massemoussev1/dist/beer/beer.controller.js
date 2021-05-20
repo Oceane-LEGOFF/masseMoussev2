@@ -41,12 +41,12 @@ let BeerController = class BeerController {
         console.log('lettre', [beers]);
         return beers;
     }
-    async addBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto) {
-        const generatedId = await this.beerService.inserBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto);
+    async addBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto, beeDescription) {
+        const generatedId = await this.beerService.inserBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto, beeDescription);
         return { id: generatedId };
     }
-    async updateBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto) {
-        await this.beerService.updateBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto);
+    async updateBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto, beeDescription) {
+        await this.beerService.updateBeer(beeId, beeName, beeCity, beeState, beePrice, beePhoto, beeDescription);
         return null;
     }
 };
@@ -86,8 +86,9 @@ __decorate([
     __param(3, common_1.Body('state ')),
     __param(4, common_1.Body('price')),
     __param(5, common_1.Body('photo')),
+    __param(6, common_1.Body('description')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String, String, String, String, String]),
+    __metadata("design:paramtypes", [String, String, String, String, String, String, String]),
     __metadata("design:returntype", Promise)
 ], BeerController.prototype, "addBeer", null);
 __decorate([
@@ -99,8 +100,9 @@ __decorate([
     __param(3, common_1.Body('state')),
     __param(4, common_1.Body('price')),
     __param(5, common_1.Body('photo')),
+    __param(6, common_1.Body('description')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String, String, String, String, String]),
+    __metadata("design:paramtypes", [String, String, String, String, String, String, String]),
     __metadata("design:returntype", Promise)
 ], BeerController.prototype, "updateBeer", null);
 BeerController = __decorate([

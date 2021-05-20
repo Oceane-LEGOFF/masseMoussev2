@@ -6,7 +6,8 @@ export const BeerSchema = new mongoose.Schema({ // Schema mapé à une collectio
   city: {type: String, require: true},
   state: {type: String, require: true},
   price: {type: String, require: true},
-  photo: {type: String, require: true}
+  photo: {type: String, require: true},
+  description: {type: String, require: true}
 
   
 // {typeKey: '$type'}
@@ -18,7 +19,8 @@ export interface Beer extends mongoose.Document {
     city: string,
     state: string,
     price: string,
-    photo: string
+    photo: string,
+    description: string
     
   
 }

@@ -11,6 +11,7 @@ export declare class BeerService {
         state: string;
         price: string;
         photo: string;
+        description: string;
     }[]>;
     getBeers1(): Promise<{
         id: any;
@@ -19,6 +20,7 @@ export declare class BeerService {
         state: string;
         price: string;
         photo: string;
+        description: string;
     }[]>;
     getBeers2(): Promise<{
         id: any;
@@ -27,6 +29,7 @@ export declare class BeerService {
         state: string;
         price: string;
         photo: string;
+        description: string;
     }[]>;
     getSingleBeerById(beerId: string): Promise<{
         id: any;
@@ -35,10 +38,11 @@ export declare class BeerService {
         state: any;
         price: any;
         photo: any;
+        description: any;
     }>;
     private findBeerById;
     filterByTitle(name: string): Promise<Beer[]>;
     filterByLetters(letters: string): Promise<Beer[]>;
-    inserBeer(id: string, name: string, city: string, state: string, price: string, photo: string): Promise<string>;
-    updateBeer(id: string, name: string, city: string, state: string, price: string, photo: string): Promise<void>;
+    inserBeer(id: string, name: string, city: string, state: string, price: string, photo: string, description: string): Promise<string>;
+    updateBeer(id: string, name: string, city: string, state: string, price: string, photo: string, description: string): Promise<void>;
 }

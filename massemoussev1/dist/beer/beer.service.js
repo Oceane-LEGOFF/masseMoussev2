@@ -28,7 +28,8 @@ let BeerService = class BeerService {
             city: ber.city,
             state: ber.state,
             price: ber.price,
-            photo: ber.photo
+            photo: ber.photo,
+            description: ber.description
         }));
     }
     async getBeers1() {
@@ -38,7 +39,8 @@ let BeerService = class BeerService {
             city: ber.city,
             state: ber.state,
             price: ber.price,
-            photo: ber.photo }));
+            photo: ber.photo,
+            description: ber.description }));
     }
     async getBeers2() {
         const beers = await this.beerModel.find().exec();
@@ -47,7 +49,8 @@ let BeerService = class BeerService {
             city: ber.city,
             state: ber.state,
             price: ber.price,
-            photo: ber.photo }));
+            photo: ber.photo,
+            description: ber.description }));
     }
     async getSingleBeerById(beerId) {
         const beer = await this.findBeerById(beerId);
@@ -57,7 +60,8 @@ let BeerService = class BeerService {
             city: beer.city,
             state: beer.state,
             price: beer.price,
-            photo: beer.photo };
+            photo: beer.photo,
+            description: beer.description };
     }
     async findBeerById(id) {
         let beer;
@@ -79,13 +83,13 @@ let BeerService = class BeerService {
         console.log('Voici les beers contenant la lettre', letters, beersL);
         return beersL;
     }
-    async inserBeer(id, name, city, state, price, photo) {
-        const newBeer = new this.beerModel({ id, name, city, state, price });
+    async inserBeer(id, name, city, state, price, photo, description) {
+        const newBeer = new this.beerModel({ id, name, city, state, price, photo, description });
         const result = await newBeer.save();
         console.log(result);
         return result.id;
     }
-    async updateBeer(id, name, city, state, price, photo) {
+    async updateBeer(id, name, city, state, price, photo, description) {
         const updateBeer = await this.findBeerById(id);
         if (id) {
             updateBeer.id = id;
@@ -104,6 +108,9 @@ let BeerService = class BeerService {
         }
         if (photo) {
             updateBeer.photo = photo;
+        }
+        if (description) {
+            updateBeer.description = description;
         }
         updateBeer.save();
     }

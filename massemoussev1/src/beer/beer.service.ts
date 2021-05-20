@@ -17,7 +17,8 @@ export class BeerService {
             city: ber.city,
             state: ber.state,
             price: ber.price,
-            photo: ber.photo
+            photo: ber.photo,
+            description: ber.description
             }))
     }
 
@@ -28,7 +29,8 @@ export class BeerService {
             city: ber.city,
             state: ber.state,
             price: ber.price,
-            photo: ber.photo}))
+            photo: ber.photo,
+            description: ber.description}))
     }
 
     async getBeers2() {
@@ -38,18 +40,20 @@ export class BeerService {
             city: ber.city,
             state: ber.state,
             price: ber.price,
-            photo: ber.photo}))
+            photo: ber.photo,
+            description: ber.description}))
     }
 
     async getSingleBeerById(beerId: string): Promise<{ id: any; name: any, city: any, state: any, price: any, photo: any}>{
         const beer = await this.findBeerById(beerId);
         console.log('beer', beer);
-        return {id: beer.id, 
-            name: beer.name,
-            city: beer.city,
-            state: beer.state,
-            price: beer.price,
-            photo: beer.photo} 
+        return {id: ber.id, 
+            name: ber.name,
+            city: ber.city,
+            state: ber.state,
+            price: ber.price,
+            photo: ber.photo,
+            description: ber.description} 
     }
 
     private async findBeerById (id: string): Promise <Beer>{
@@ -81,7 +85,8 @@ export class BeerService {
         city: string, 
         state: string,
         price: string,
-        photo: string
+        photo: string,
+        description: string
     )
     {
         const newBeer = new this.beerModel({id, name, city, state, price});
@@ -95,7 +100,8 @@ export class BeerService {
         city: string, 
         state: string,
         price: string,
-        photo: string)
+        photo: string,
+        description: string)
         {
         const updateBeer = await this.findBeerById(id);
         
@@ -111,6 +117,8 @@ export class BeerService {
             updateBeer.price = price;
         }if(photo){
             updateBeer.photo = photo;
+        }if(description){
+            updateBeer.description = description;
         }
         updateBeer.save();
             
