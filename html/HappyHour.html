@@ -90,13 +90,13 @@
                 mapboxgl.accessToken = 'pk.eyJ1Ijoia2FudmFsNzgiLCJhIjoiY2tvbzBpdGphMDZ4NzJ5bnVwN2Y1enBybyJ9.K0vIiOWSqcRol2WqX-vVCg'; // replace this with your access token
                 var map = new mapboxgl.Map({
                   container: 'map',
-                  style: 'mapbox://styles/kanval78/ckoo3ljy90m2w17qrgahfn1rx', // replace this with your style URL
+                  style: 'mapbox://styles/kanval78/ckowy4k0w0akl17qr10712lq3', // replace this with your style URL
                   center: [2.35136, 48.8546],
-                  zoom: 10.7
+                  zoom: 11.7
                 });
                 map.on('click', function(e) {
               var features = map.queryRenderedFeatures(e.point, {
-                layers: ['beer-map'] // replace this with the name of the layer
+                layers: ['bar-paris'] // replace this with the name of the layer
               });
             
               if (!features.length) {
@@ -107,7 +107,7 @@
             
               var popup = new mapboxgl.Popup({ offset: [0, -15] })
                 .setLngLat(feature.geometry.coordinates)
-                .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+                .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.happyhour + '</p>')
                 .addTo(map);
             });
                 </script>
