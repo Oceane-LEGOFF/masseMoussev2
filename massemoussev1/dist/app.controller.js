@@ -22,6 +22,7 @@ let AppController = class AppController {
         this.authService = authService;
     }
     async login(req) {
+        console.log("erreur");
         return this.authService.login(req.user);
     }
     getProfil(req) {
@@ -38,7 +39,7 @@ __decorate([
 ], AppController.prototype, "login", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),
-    common_1.Get('profile'),
+    common_1.Get('clients'),
     __param(0, common_1.Request()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),

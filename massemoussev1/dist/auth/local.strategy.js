@@ -14,13 +14,14 @@ const passport_local_1 = require("passport-local");
 const passport_1 = require("@nestjs/passport");
 const common_1 = require("@nestjs/common");
 const auth_service_1 = require("./auth.service");
+const clients_service_1 = require("../clients/clients.service");
 let LocalStrategy = class LocalStrategy extends passport_1.PassportStrategy(passport_local_1.Strategy) {
     constructor(authService) {
         super();
         this.authService = authService;
     }
-    async validate(username, password, admin) {
-        const user = await this.authService.validateUser(username, password, admin);
+    async validate(mail, mdp) {
+        const user = await this.authService.validateUser(mail, mdp);
         if (!user) {
             throw new common_1.UnauthorizedException();
         }

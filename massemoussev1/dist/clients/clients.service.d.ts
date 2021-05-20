@@ -1,5 +1,6 @@
 import { Model } from 'mongoose';
 import { Clients } from './clients.modele';
+export declare type Client = any;
 export declare class ClientsService {
     private readonly clientsModel;
     private clients;
@@ -67,4 +68,5 @@ export declare class ClientsService {
     filterByLetters0(letters: string): Promise<Clients[]>;
     insertClient(id: string, name: string, prenom: string, naissance: string, mail: string, mdp: string, role: string): Promise<string>;
     updateClient(id: string, name: string, prenom: string, naissance: string, mail: string, mdp: string, role: string): Promise<void>;
+    findOne(mail: string): Promise<Client | undefined>;
 }

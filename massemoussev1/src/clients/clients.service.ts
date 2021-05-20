@@ -1,7 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
+import { AnyARecord } from 'dns';
 import { Model } from 'mongoose';
 import {Clients} from './clients.modele'
+
+export type Client = any;
 
 @Injectable()
 export class ClientsService {
@@ -178,4 +181,8 @@ export class ClientsService {
             
     }
 
+    async findOne(mail: string): Promise<Client | undefined > {
+        return this.clientsModel.find(clients => clients.mail === mail);
+
+    }
 }

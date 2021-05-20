@@ -16,6 +16,10 @@ import { ClientsService } from './clients.service';
 
     providers: [
         ClientsService
+    ],
+
+    exports: [
+        ClientsService
     ]
 })
 

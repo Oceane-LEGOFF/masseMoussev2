@@ -15,8 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BeerController = void 0;
 const common_1 = require("@nestjs/common");
 const jwt_auth_guards_1 = require("../auth/jwt-auth.guards");
-const role_enums_1 = require("../role/role.enums");
-const roles_decorator_1 = require("../role/roles.decorator");
 const beer_service_1 = require("./beer.service");
 let BeerController = class BeerController {
     constructor(beerService) {
