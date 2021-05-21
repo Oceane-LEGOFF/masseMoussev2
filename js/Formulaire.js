@@ -1,7 +1,8 @@
-const inpNom = document.querySelector("#Nom");
+const inpNom = document.querySelector("#nom");
 const inpMail = document.querySelector("#email");
 const inpMdp = document.querySelector("#mdp");
 const inpConfirme = document.querySelector("#mdpconf");
+const inpPrenom = document.querySelector("#Prénom");
 
 const buttonConfirm = document.querySelector("#confirm");
 
