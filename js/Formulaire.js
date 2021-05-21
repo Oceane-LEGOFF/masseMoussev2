@@ -146,11 +146,11 @@ function creationClient() {
   };
   xhr.send(
     JSON.stringify({
-      name: nom,
-      prenom: prenom,
-      naissance: date,
-      mail: email,
-      mdp: mdp
+      "name": nom,
+      "prenom": prenom,
+      "naissance": date,
+      "mail": email,
+      "mdp": mdp
     })
   );
 }
