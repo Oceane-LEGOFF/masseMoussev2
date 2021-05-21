@@ -85,37 +85,28 @@ if (testAll < 3) {
 });
 
 
-function test(){ 
-  var email = document.getElementById("email").value;
-var xhr = new XMLHttpRequest(),
-    method = "GET",
-    URL = 'http://localhost:3000/clients/searchM?search=' + email;
-   var result = xhr.open(method, URL, true);
-    xhr.onreadystatechange = function () {
-      if(xhr.readyState === 4 && xhr.status === 200) {
-        alert("ca fonctionne")
-      }
-      else {
-        alert("Compte inexistant");
-      }
-    };
-    xhr.send();
-    }
-
 function VerifCompte() {
 
+console.log("début")
 var email = document.getElementById("email").value;
 var xhr = new XMLHttpRequest(),
     method = "GET",
     URL = 'http://localhost:3000/clients/searchM?search=' + email;
 
+console.log("création xhr");
+    
+
+console.log("création json");
 xhr.open(method, URL, true);
 xhr.onreadystatechange = function () {
   if(xhr.readyState === 4 && xhr.status === 200) {
-    alert("ca fonctionne")
-  }
-  else if (email != getClients.email ) {
-    alert("Compte inexistant");
+  var reponse = JSON.parse(xhr.response);
+   if( xhr !== "[]"){
+     console.log("réussi");
+   }
+ else {
+   console.log("échec");
+ }
   }
 };
 xhr.send();
