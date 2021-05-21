@@ -38,10 +38,18 @@ function loadDoc() {
 			var desc = element.description;
 			var imgUrl = element.photo;
 			var txt = document.createElement('p');
+			txt.style.letterSpacing = "1px";
+			txt.style.borderTop = "thick solid #faa381";
+			txt.style.lineHeight = "1.5";
+			txt.style.marginLeft = "15px";
+			txt.style.marginRight = "15px";
+			txt.style.textAlign = "center";
+
 			var img = document.createElement('img');
 			txt.innerText = name + price + desc;
 			img.src = imgUrl;
-			img.style.height = '200px';
+			img.style.height = '300px';
+			img.style.marginLeft = '1000px';
 			div.appendChild(txt);
 			div.appendChild(img);
 		});

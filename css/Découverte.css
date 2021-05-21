@@ -1,0 +1,11 @@
+.recherche{ 
+    background-color: #faa381;
+    border-radius: var(--border-radius-small);
+    padding: 14px 24px;
+    color: var(--black-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-light);
+    text-transform:lowercase;
+    letter-spacing: 0.75px;
+    white-space:unset;
+}

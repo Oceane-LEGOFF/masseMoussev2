@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <title>Découverte</title>
+     <link rel="shortcut icon" type="image/x-icon" href="../images/biere/pinte.png"/>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../css/font-awesome.min.css">
+     <link rel="stylesheet" href="../css/aos.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
+     <link rel="stylesheet" href="../css/Découverte.css">
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">MasseMousse</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link smoothScroll">Haut page</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">Recherche</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#class" class="nav-link smoothScroll">Autres pages</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+     <!-- HERO -->
+     <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+
+            <div class="bg-overlay"></div>
+
+               <div class="container">
+                    <div class="row">
+                         <div class="col-lg-8 col-md-10 mx-auto col-12">
+                              <div class="hero-text mt-5 text-center">
+                                    <h6 data-aos="fade-up" data-aos-delay="300">Bière qui roule amasse masse mousse</h6>
+                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Découverte</h1>
+
+                                    <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">Recherche</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+     </section>
+
+     <!-- Barre de recherche -->
+     <section style="background-color: #faa381; 
+                    margin-left: 100px; 
+                    margin-right: 100px; 
+                    margin-top: 100px; 
+                    margin-bottom: 100px;" class="about section" id="about">
+
+        <div class="container">
+            <div class="row">
+                    <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
+                            <p data-aos="fade-up" data-aos-delay="400"> 
+                            Ici tu vas trouver tout type de bières        
+                            </p></br></br></br>
+                            <div class="recherche">
+                            <label for="site-search">Si tu cherches une biere particuliere:</label>
+                            <input type="search" id="site-search" name="q" aria-label="Search through site content">
+                            <button onclick="loadDoc()" >Recherche</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+     </section>
+
+     <div id ='8mort6blesse'>
+   
+     </div>
+
+
+     <!-- CLASS -->
+     <section class="class section" id="class">
+               <script src="../js/Découverte.js"></script>  
+     </section>
+
+    <section class="class section" id="class">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-lg-12 col-12 text-center mb-5">
+                  <h6 data-aos="fade-up">Pour acceder aux différentes pages tu certifies avoir 18 ans minimum.</h6>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                  <div class="class-thumb">
+                      <a href="Tuto.html">
+                          <img src="../images/class/diy.jpg" class="img-fluid" alt="Class">
+                      </a>
+                      <div class="class-info">
+                          <h3 class="mb-1">Tuto </h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                  <div class="class-thumb">
+                      <a href="../html/Evenement.html">
+
+                          <img src="../images/class/evenement.jpg" class="img-fluid" alt="Class">
+                      </a>
+                      <div class="class-info">
+                          <h3 class="mb-1">Evenement</h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                  <div class="class-thumb">
+                      <a href="HappyHour.html">
+
+                          <img src="../images/class/happyHour.jpg" class="img-fluid" alt="Class">
+                      </a>
+                      <div class="class-info">
+                          <h3 class="mb-1">HappyHour</h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+     <!-- SCRIPTS -->
+     <script src="../js/jquery.min.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/aos.js"></script>
+     <script src="../js/smoothscroll.js"></script>
+     <script src="../js/custom.js"></script>
+     <script src="../massemoussev1/"></script>
+     <script src="../js/ClassementBières.js"></script>
+
+</body>
+</html>
