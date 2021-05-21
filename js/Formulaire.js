@@ -107,12 +107,7 @@ function VerifCompte() {
 var email = document.getElementById("email").value;
 var xhr = new XMLHttpRequest(),
     method = "GET",
-    URL = 'http://localhost:3000/clients/searchM=search' + email;
-
-
-// var xhr2 = new XMLHttpRequest(),
-//     method = "POST"
-//     URL = 'http://localhost:3000/clients/";
+    URL = 'http://localhost:3000/clients/searchM?search=' + email;
 
 xhr.open(method, URL, true);
 xhr.onreadystatechange = function () {
