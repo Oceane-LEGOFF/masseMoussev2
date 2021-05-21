@@ -84,7 +84,7 @@ __decorate([
     __param(3, common_1.Body('state ')),
     __param(4, common_1.Body('price')),
     __param(5, common_1.Body('photo')),
-    __param(6, common_1.Body('description')),
+    __param(6, common_1.Body('decription')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String, String, String, String, String]),
     __metadata("design:returntype", Promise)

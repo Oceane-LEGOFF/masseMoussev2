@@ -22,8 +22,6 @@ export declare class ClientsController {
     }>;
     getClients3(letters: string): Promise<import("./clients.modele").Clients[]>;
     getClients2(letters: string): Promise<import("./clients.modele").Clients[]>;
-    addBeer(cliid: string, cliname: string, cliprenom: string, clinaissance: string, climail: string, climdp: string, clirole: string): Promise<{
-        id: string;
-    }>;
+    addClient(cliid: string, cliname: string, cliprenom: string, clinaissance: string, climail: string, climdp: string, clirole: string): Promise<import("./clients.modele").Clients>;
     updateClient(cliid: string, cliname: string, cliprenom: string, clinaissance: string, climail: string, climdp: string, clirole: string): Promise<any>;
 }

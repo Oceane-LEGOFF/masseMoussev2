@@ -1662,8 +1662,8 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.service.ts": {
-        "version": "98762c2cd76140b2fd58d7026b3c0bc4c79748fc1ee1e65ef83f4a9effdfb61d",
-        "signature": "83678b2d3b8b2692c9a1f2cfafee421c896038dcbb7e3fa1be35bc1e34ede6a6",
+        "version": "98e4b7f590f452ace35e6ef26c1a8f7c63b03024c7c0354cb7fc1852aa5acde3",
+        "signature": "9e19030c24500466ceb62998302849c5d134c54c7c512e2b86b041e60d50ac9b",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
@@ -1687,18 +1687,18 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.model.ts": {
-        "version": "f13750fd80d099776e3513460486c7c4b32499aef59ee3892e04cea8c607ffa0",
-        "signature": "11221ea5868694abd5eb33114e9f262916aa9cf2be85964d897bad2c1fc80631",
+        "version": "fa28ad847535ad474bcd3a937be44c86b7a79ba2b89131c150aeb6304eea1ea8",
+        "signature": "b62f1bc95eb65938972efea5abec8f8c44b319185218beebf53171533b5f9095",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.service.ts": {
-        "version": "c142c7fa50769581484ffd293f93f221c803329815cf7ac2288028f348ba4009",
-        "signature": "1a0781cfd5f51ffe67a514a66b84ac6847481421ea90c3b0a570b964268ad116",
+        "version": "d1bb191c9b6d054cd6c9bca074a2b7545983f74fde36ee71c9f5f44c40ee8fb5",
+        "signature": "d4f123da1d6096163e02b8e67e5632642595a462f4bca6d00f81099500afed8b",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "2ccb6815f8c88a3562137f8d97a8aba3ddc4cd1de6384ce52e06f36ac08da413",
-        "signature": "1f4fe8783898aecaf034d2c9d7fafdc2106c31f11e4871924608cee9c3fe82c7",
+        "version": "c5ef7607a83bc9c891e0970ebc60fc7cac3d408389c30af5018b6b5e5b976803",
+        "signature": "0642bec69808dcace2a17ab77347c774569701bc1a4137343395aee091a61532",
         "affectsGlobalScope": false
       },
       "../src/beer/beer.module.ts": {
@@ -1737,8 +1737,8 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.controller.ts": {
-        "version": "3bab5cc3970df56e2c7fba95158fbe5fea13a92aefeb44955bf47293984246cb",
-        "signature": "a8eea2eac8f5d45388411ac3508fcfca882af28828586e999e95a6b53afa8d40",
+        "version": "e7fab8a02d579876206fc8071ce718439687f8eb6fbb0ce77828fb83081660c3",
+        "signature": "14159e7edb37bbc9d289a6bb72f175c749cd2a56116a95f58477ba2c8acc0256",
         "affectsGlobalScope": false
       },
       "../src/clients/clients.module.ts": {

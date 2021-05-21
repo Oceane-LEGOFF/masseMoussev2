@@ -134,21 +134,11 @@ export class ClientsService {
         return clientsN; 
     }
 
-    async insertClient (
-    id: string,
-    name: string,
-    prenom: string,
-    naissance: string,
-    mail: string,
-    mdp: string,
-    role: string,)
-   
-    {
-
+    async insertClient (id: string, name: string, prenom: string, naissance: string, mail: string, mdp: string, role: string){
         const newClient = new this.clientsModel({id, name, prenom, naissance, mail, mdp, role});
         const result = await newClient.save();
-        console.log(result);
-        return result.id as string;
+        console.log(result, newClient, "voici le nouveau client");
+        return result;
     }
 
     async updateClient ( id: string,
