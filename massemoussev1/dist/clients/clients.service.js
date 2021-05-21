@@ -132,8 +132,8 @@ let ClientsService = class ClientsService {
     async insertClient(id, name, prenom, naissance, mail, mdp, role) {
         const newClient = new this.clientsModel({ id, name, prenom, naissance, mail, mdp, role });
         const result = await newClient.save();
-        console.log(result);
-        return result.id;
+        console.log(result, newClient, "voici le nouveau client");
+        return result;
     }
     async updateClient(id, name, prenom, naissance, mail, mdp, role) {
         const updateClient = await this.findClientById(id);

@@ -66,7 +66,7 @@ export declare class ClientsService {
     filterByName(name: string): Promise<Clients[]>;
     filterByLetters(letters: string): Promise<Clients[]>;
     filterByLetters0(letters: string): Promise<Clients[]>;
-    insertClient(id: string, name: string, prenom: string, naissance: string, mail: string, mdp: string, role: string): Promise<string>;
+    insertClient(id: string, name: string, prenom: string, naissance: string, mail: string, mdp: string, role: string): Promise<Clients>;
     updateClient(id: string, name: string, prenom: string, naissance: string, mail: string, mdp: string, role: string): Promise<void>;
     findOne(mail: string): Promise<Client | undefined>;
 }

@@ -62,7 +62,7 @@ export class ClientsController {
     @Post()
     // @UseGuards(JwtAuthGuard)
     // @Roles(Role.Admin)
-    async addBeer(
+    async addClient(
         @Body('id') cliid: string,
         @Body('name') cliname: string,
         @Body('prenom ') cliprenom: string,
@@ -82,7 +82,7 @@ export class ClientsController {
             climdp,
             clirole,
         );
-        return { id: generatedId };
+        return generatedId;
     }
 
     //   @Roles(Role.Admin)

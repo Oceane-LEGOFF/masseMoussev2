@@ -39,9 +39,9 @@ let ClientsController = class ClientsController {
         console.log('lettre', [client]);
         return client;
     }
-    async addBeer(cliid, cliname, cliprenom, clinaissance, climail, climdp, clirole) {
+    async addClient(cliid, cliname, cliprenom, clinaissance, climail, climdp, clirole) {
         const generatedId = await this.clientsService.insertClient(cliid, cliname, cliprenom, clinaissance, climail, climdp, clirole);
-        return { id: generatedId };
+        return generatedId;
     }
     async updateClient(cliid, cliname, cliprenom, clinaissance, climail, climdp, clirole) {
         await this.clientsService.updateClient(cliid, cliname, cliprenom, clinaissance, climail, climdp, clirole);
@@ -87,7 +87,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String, String, String, String, String]),
     __metadata("design:returntype", Promise)
-], ClientsController.prototype, "addBeer", null);
+], ClientsController.prototype, "addClient", null);
 __decorate([
     common_1.Patch(':id'),
     common_1.UseGuards(jwt_auth_guards_1.JwtAuthGuard),

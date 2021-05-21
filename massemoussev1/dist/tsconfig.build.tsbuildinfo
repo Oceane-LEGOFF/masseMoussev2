@@ -1662,8 +1662,8 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.service.ts": {
-        "version": "98762c2cd76140b2fd58d7026b3c0bc4c79748fc1ee1e65ef83f4a9effdfb61d",
-        "signature": "83678b2d3b8b2692c9a1f2cfafee421c896038dcbb7e3fa1be35bc1e34ede6a6",
+        "version": "98e4b7f590f452ace35e6ef26c1a8f7c63b03024c7c0354cb7fc1852aa5acde3",
+        "signature": "9e19030c24500466ceb62998302849c5d134c54c7c512e2b86b041e60d50ac9b",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
@@ -1737,8 +1737,8 @@
         "affectsGlobalScope": false
       },
       "../src/clients/clients.controller.ts": {
-        "version": "5e3d5eb93925173598bbdeb4460ef0a9004117d76b409df7a3cca4596bf15692",
-        "signature": "a8eea2eac8f5d45388411ac3508fcfca882af28828586e999e95a6b53afa8d40",
+        "version": "e7fab8a02d579876206fc8071ce718439687f8eb6fbb0ce77828fb83081660c3",
+        "signature": "14159e7edb37bbc9d289a6bb72f175c749cd2a56116a95f58477ba2c8acc0256",
         "affectsGlobalScope": false
       },
       "../src/clients/clients.module.ts": {
@@ -2120,6 +2120,11 @@
         "version": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "signature": "5a2a25feca554a8f289ed62114771b8c63d89f2b58325e2f8b7043e4e0160d11",
         "affectsGlobalScope": false
+      },
+      "../../../../../../../../node_modules/@types/zen-observable/index.d.ts": {
+        "version": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
+        "signature": "70c1b4a47ac88b6a165b57398db4609f1ac8af446e7dbf38939c7c08524d0c1d",
+        "affectsGlobalScope": true
       }
     },
     "options": {
